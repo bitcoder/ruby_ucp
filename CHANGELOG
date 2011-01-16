@@ -1,0 +1,42 @@
+============ RELEASED ==============
+
+= 0.1.0
+* first public version of "ruby_ucp" gem
+* multiple PDUs support (operations 30,31,51,52,53,54,55,56,57,58,60,61)
+* added a class to implement an UCP server (e.g. for simulating a SMSC)
+* added a class to implement an UCP client (e.g. for simulating a large account)
+
+= 0.0.1
+* first version; non-public
+
+============ SCHEDULED ==============
+
+= 1.0.0
+* full test coverage
+* full documentation (readme, methods, etc)
+* stable API (until this version, some methods may change name and/or package)
+
+= 0.9.0
+* TO BE DEFINED
+
+= 0.8.0
+* TO BE DEFINED
+
+= 0.7.0
+* TO BE DEFINED
+
+= 0.6.0
+* TO BE DEFINED
+
+= 0.5.0
+* enhance some PDUs with helper methods (e.g. for getting date field among others)
+
+= 0.4.0
+* add samples
+
+= 0.3.0
+* methods documentation
+
+= 0.2.0
+* miscelaneous cleanup
+
