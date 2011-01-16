@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>decode_ucp_oadc (Ucp::Util::UCP)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/util/ucp.rb, line 860</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">decode_ucp_oadc</span>(<span class="ruby-identifier">ucp</span>)
+    <span class="ruby-identifier">otoa</span>=<span class="ruby-keyword kw">nil</span>
+    <span class="ruby-identifier">oadc</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:oadc</span>)
+
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp51Operation</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp52Operation</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp53Operation</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp54Operation</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp55Operation</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp56Operation</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp57Operation</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Ucp58Operation</span>)
+      <span class="ruby-identifier">otoa</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:otoa</span>)
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">otoa</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">otoa</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;1139&quot;</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">oadc</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">otoa</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;5039&quot;</span>)
+      <span class="ruby-comment cmt">#useful_nibbles=oadc[0,2].to_i(16)</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-constant">UCP</span>.<span class="ruby-identifier">decode7bitgsm</span>(<span class="ruby-identifier">oadc</span>[<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>])
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-comment cmt">#</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># by default, return oadc</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">oadc</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

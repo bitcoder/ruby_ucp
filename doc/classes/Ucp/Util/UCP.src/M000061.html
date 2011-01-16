@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>initialize_ascii2ira (Ucp::Util::UCP)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/util/ucp.rb, line 39</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">initialize_ascii2ira</span>
+    
+    (<span class="ruby-value str">'A'</span><span class="ruby-operator">..</span><span class="ruby-value str">'Z'</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">add_char</span>(<span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">c</span>)
+    }
+    (<span class="ruby-value str">'a'</span><span class="ruby-operator">..</span><span class="ruby-value str">'z'</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment cmt">#@gsmtable[c]=c[0]</span>
+      <span class="ruby-comment cmt">#@asciitable[c[0]]=c</span>
+      <span class="ruby-identifier">add_char</span>(<span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">c</span>)
+    }
+    (<span class="ruby-value str">'0'</span><span class="ruby-operator">..</span><span class="ruby-value str">'9'</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">add_char</span>(<span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>],<span class="ruby-identifier">c</span>)
+    }
+
+
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x00</span>,<span class="ruby-value str">&quot;@&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x01</span>,<span class="ruby-value str">&quot;£&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x02</span>,<span class="ruby-value str">&quot;$&quot;</span>)
+    <span class="ruby-comment cmt">#add_char(0x03,&quot; &quot;)</span>
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x04</span>,<span class="ruby-value str">&quot;è&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x05</span>,<span class="ruby-value str">&quot;é&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x06</span>,<span class="ruby-value str">&quot;ù&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x07</span>,<span class="ruby-value str">&quot;ì&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x08</span>,<span class="ruby-value str">&quot;ò&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x09</span>,<span class="ruby-value str">&quot;Ç&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x0</span><span class="ruby-constant">A</span>,<span class="ruby-value str">&quot;\n&quot;</span>)
+    <span class="ruby-comment cmt">#add_char(0x0B,&quot; &quot;)</span>
+    <span class="ruby-comment cmt">#add_char(0x0C,&quot; &quot;)</span>
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x0</span><span class="ruby-constant">D</span>,<span class="ruby-value str">&quot;\r&quot;</span>)
+    <span class="ruby-comment cmt">#add_char(0x0E,&quot;A&quot;)</span>
+    <span class="ruby-comment cmt">#add_char(0x0F,&quot;a&quot;)</span>
+
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x1</span><span class="ruby-constant">F</span>,<span class="ruby-value str">&quot;É&quot;</span>)
+
+
+
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x20</span>,<span class="ruby-value str">&quot; &quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x21</span>,<span class="ruby-value str">&quot;!&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x22</span>,<span class="ruby-value str">'&quot;'</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x23</span>,<span class="ruby-value str">&quot;#&quot;</span>)
+    <span class="ruby-comment cmt">#add_char(0x24,&quot; &quot;)</span>
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x25</span>,<span class="ruby-value str">&quot;%&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x26</span>,<span class="ruby-value str">&quot;&amp;&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x27</span>,<span class="ruby-value str">&quot;'&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x28</span>,<span class="ruby-value str">&quot;(&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x29</span>,<span class="ruby-value str">&quot;)&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x2</span><span class="ruby-constant">A</span>,<span class="ruby-value str">&quot;*&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x2</span><span class="ruby-constant">B</span>,<span class="ruby-value str">&quot;+&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x2</span><span class="ruby-constant">C</span>,<span class="ruby-value str">&quot;,&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x2</span><span class="ruby-constant">D</span>,<span class="ruby-value str">&quot;-&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x2</span><span class="ruby-constant">E</span>,<span class="ruby-value str">&quot;.&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x2</span><span class="ruby-constant">F</span>,<span class="ruby-value str">&quot;/&quot;</span>)
+
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">A</span>,<span class="ruby-value str">&quot;:&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">B</span>,<span class="ruby-value str">&quot;;&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">C</span>,<span class="ruby-value str">&quot;&lt;&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">D</span>,<span class="ruby-value str">&quot;=&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">E</span>,<span class="ruby-value str">&quot;&gt;&quot;</span>)
+    <span class="ruby-identifier">add_char</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">F</span>,<span class="ruby-value str">&quot;?&quot;</span>)
+
+
+
+    <span class="ruby-comment cmt">#@extensiontable[&quot;€&quot;]=0x65</span>
+    <span class="ruby-comment cmt">#@extensiontable_rev[0x65]=&quot;€&quot;</span>
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x65</span>,<span class="ruby-value str">&quot;€&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x14</span>,<span class="ruby-value str">&quot;^&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x28</span>,<span class="ruby-value str">&quot;{&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x29</span>,<span class="ruby-value str">&quot;}&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x2</span><span class="ruby-constant">F</span>,<span class="ruby-value str">&quot;\\&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">C</span>,<span class="ruby-value str">&quot;[&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">D</span>,<span class="ruby-value str">&quot;~&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x3</span><span class="ruby-constant">E</span>,<span class="ruby-value str">&quot;]&quot;</span>)
+    <span class="ruby-identifier">add_extchar</span>(<span class="ruby-value">0x40</span>,<span class="ruby-value str">&quot;|&quot;</span>)
+
+
+
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

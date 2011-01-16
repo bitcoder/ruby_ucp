@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>connect (Ucp::Util::UcpClient)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/util/ucp_client.rb, line 25</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">connect</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;connect()&quot;</span>
+    
+    <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-ivar">@socket</span> = <span class="ruby-constant">TCPSocket</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@host</span>, <span class="ruby-ivar">@port</span>)
+        <span class="ruby-ivar">@connected</span>=<span class="ruby-keyword kw">true</span>
+    <span class="ruby-keyword kw">rescue</span>
+        <span class="ruby-ivar">@connected</span>=<span class="ruby-keyword kw">false</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+    <span class="ruby-keyword kw">end</span>
+
+
+    <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@authcreds</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">auth_ucp</span>=<span class="ruby-constant">Ucp60Operation</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">auth_ucp</span>.<span class="ruby-identifier">basic_auth</span>(<span class="ruby-ivar">@authcreds</span>[<span class="ruby-identifier">:login</span>],<span class="ruby-ivar">@authcreds</span>[<span class="ruby-identifier">:password</span>])
+      <span class="ruby-identifier">auth_ucp</span>.<span class="ruby-identifier">trn</span>=<span class="ruby-value str">&quot;00&quot;</span>
+      <span class="ruby-identifier">answer</span>=<span class="ruby-identifier">send_sync</span>(<span class="ruby-identifier">auth_ucp</span>)
+      <span class="ruby-comment cmt">#puts &quot;Crecv: #{answer.to_s}\n&quot;</span>
+      
+      <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">answer</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">answer</span>.<span class="ruby-identifier">is_ack?</span>
+        <span class="ruby-identifier">inc_trn</span>()
+        <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">close</span>()
+        <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

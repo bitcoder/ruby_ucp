@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Class: Ucp::Util::UcpServer</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (U)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../Ucp.html" title="Ucp (module)">Ucp</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Ucp::Util (module)">Util</a></span></span>
+     &raquo; 
+    <span class="title">UcpServer</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Ucp::Util::UcpServer
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Ucp::Util::UcpServer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/ucp/util/ucp_server.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (UcpServer) <strong>initialize</strong>(handler, port, host = nil) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of UcpServer.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop-instance_method" title="#stop (instance method)">- (Object) <strong>stop</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Ucp::Util::UcpServer (class)">UcpServer</a></span></tt>) <strong>initialize</strong>(handler, port, host = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of UcpServer
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp_server.rb', line 18</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='handler identifier id'>handler</span><span class='comma token'>,</span><span class='port identifier id'>port</span><span class='comma token'>,</span><span class='host identifier id'>host</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+
+<span class='comment val'>#     serv = TCPServer.new(port)</span>
+<span class='comment val'>#     begin</span>
+<span class='comment val'>#       @sock = serv.accept_nonblock</span>
+<span class='comment val'>#     rescue Errno::EAGAIN, Errno::ECONNABORTED, Errno::EPROTO, Errno::EINTR</span>
+<span class='comment val'>#       IO.select([serv])</span>
+<span class='comment val'>#       retry</span>
+<span class='comment val'>#     end</span>
+<span class='comment val'>#     # sock is an accepted socket.</span>
+  
+<span class='comment val'>#  end</span>
+
+
+  <span class='@server ivar id'>@server</span> <span class='assign token'>=</span> <span class='host identifier id'>host</span> <span class='integer val'>? </span><span class='TCPServer constant id'>TCPServer</span><span class='dot token'>.</span><span class='open identifier id'>open</span><span class='lparen token'>(</span><span class='host identifier id'>host</span><span class='comma token'>,</span> <span class='port identifier id'>port</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='TCPServer constant id'>TCPServer</span><span class='dot token'>.</span><span class='open identifier id'>open</span><span class='lparen token'>(</span><span class='port identifier id'>port</span><span class='rparen token'>)</span>
+  <span class='@server ivar id'>@server</span><span class='dot token'>.</span><span class='setsockopt identifier id'>setsockopt</span><span class='lparen token'>(</span> <span class='Socket constant id'>Socket</span><span class='colon2 op'>::</span><span class='SOL_SOCKET constant id'>SOL_SOCKET</span><span class='comma token'>,</span> <span class='Socket constant id'>Socket</span><span class='colon2 op'>::</span><span class='SO_REUSEADDR constant id'>SO_REUSEADDR</span><span class='comma token'>,</span> <span class='integer val'>1</span> <span class='rparen token'>)</span>
+
+
+  <span class='port identifier id'>port</span> <span class='assign token'>=</span> <span class='@server ivar id'>@server</span><span class='dot token'>.</span><span class='addr identifier id'>addr</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+  <span class='addrs identifier id'>addrs</span> <span class='assign token'>=</span> <span class='@server ivar id'>@server</span><span class='dot token'>.</span><span class='addr identifier id'>addr</span><span class='lbrack token'>[</span><span class='float val'>2</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='uniq identifier id'>uniq</span>
+
+  <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;*** listening on #{addrs.collect{|a|&quot;#{a}:#{port}&quot;}.join(' ')}&quot;</span>
+
+  <span class='Thread constant id'>Thread</span><span class='dot token'>.</span><span class='start identifier id'>start</span> <span class='do do kw'>do</span>
+
+    <span class='loop identifier id'>loop</span> <span class='do do kw'>do</span>
+      <span class='socket identifier id'>socket</span> <span class='assign token'>=</span> <span class='@server ivar id'>@server</span><span class='dot token'>.</span><span class='accept identifier id'>accept</span>
+
+      <span class='Thread constant id'>Thread</span><span class='dot token'>.</span><span class='start identifier id'>start</span> <span class='do do kw'>do</span> <span class='comment val'># one thread per client</span>
+        <span class='s identifier id'>s</span> <span class='assign token'>=</span> <span class='socket identifier id'>socket</span>
+
+        <span class='port identifier id'>port</span> <span class='assign token'>=</span> <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='peeraddr identifier id'>peeraddr</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+        <span class='name identifier id'>name</span> <span class='assign token'>=</span> <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='peeraddr identifier id'>peeraddr</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+        <span class='addr identifier id'>addr</span> <span class='assign token'>=</span> <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='peeraddr identifier id'>peeraddr</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='rbrack token'>]</span>
+
+        <span class='comment val'>#puts &quot;*** recieving from #{name}:#{port}&quot;</span>
+
+        <span class='begin begin kw'>begin</span>
+          <span class='while while kw'>while</span> <span class='line identifier id'>line</span> <span class='assign token'>=</span> <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='gets identifier id'>gets</span><span class='lparen token'>(</span><span class='float val'>3</span><span class='dot token'>.</span><span class='chr identifier id'>chr</span><span class='rparen token'>)</span> <span class='comment val'># read a line at a time</span>
+            <span class='raise identifier id'>raise</span> <span class='ClientQuitError constant id'>ClientQuitError</span> <span class='if if_mod kw'>if</span> <span class='line identifier id'>line</span> <span class='match op'>=~</span> <span class='regexp val'>/^die\r?$/</span>
+
+            <span class='comment val'>#puts &quot;#{addr} [#{Time.now}]: #{line}&quot;</span>
+
+            <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Srecv: #{line}\n&quot;</span>              
+            <span class='ucp identifier id'>ucp</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='parse_str identifier id'>parse_str</span><span class='lparen token'>(</span><span class='line identifier id'>line</span><span class='rparen token'>)</span>
+
+            <span class='if if kw'>if</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;01&quot;</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;30&quot;</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;51&quot;</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;52&quot;</span><span class='rparen token'>)</span>
+              <span class='text identifier id'>text</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='decode_ucp_msg identifier id'>decode_ucp_msg</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='rparen token'>)</span>
+              <span class='comment val'>#puts &quot;texto_recebido: #{text}\n&quot;</span>
+              <span class='account identifier id'>account</span><span class='assign token'>=</span><span class='string val'>&quot;unknown&quot;</span>
+              <span class='smsreq identifier id'>smsreq</span><span class='assign token'>=</span><span class='SmsRequest constant id'>SmsRequest</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='decode_ucp_oadc identifier id'>decode_ucp_oadc</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:adc</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='text identifier id'>text</span><span class='comma token'>,</span><span class='account identifier id'>account</span><span class='comma token'>,</span><span class='addr identifier id'>addr</span><span class='comma token'>,</span><span class='port identifier id'>port</span><span class='rparen token'>)</span>
+              <span class='smsreq identifier id'>smsreq</span><span class='dot token'>.</span><span class='set_parts_info identifier id'>set_parts_info</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='message_ref identifier id'>message_ref</span><span class='comma token'>,</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='part_nr identifier id'>part_nr</span><span class='comma token'>,</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='total_parts identifier id'>total_parts</span><span class='rparen token'>)</span>
+              <span class='handler identifier id'>handler</span><span class='dot token'>.</span><span class='call identifier id'>call</span><span class='lparen token'>(</span><span class='smsreq identifier id'>smsreq</span><span class='rparen token'>)</span>
+            <span class='end end kw'>end</span>
+
+            <span class='reply_ucp identifier id'>reply_ucp</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='make_ucp_result identifier id'>make_ucp_result</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='rparen token'>)</span>
+            <span class='comment val'>#puts &quot;bbbbbbbbbbbbb1&quot;</span>
+            <span class='reply_ucp identifier id'>reply_ucp</span><span class='dot token'>.</span><span class='ack identifier id'>ack</span><span class='lparen token'>(</span><span class='string val'>&quot;ok&quot;</span><span class='rparen token'>)</span>
+            <span class='comment val'>#puts &quot;bbbbbbbbbbbbb2&quot;</span>
+            <span class='comment val'>#puts &quot;reply #{reply_ucp.to_s}&quot;</span>
+            <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='print identifier id'>print</span> <span class='reply_ucp identifier id'>reply_ucp</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+            <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Ssent: #{reply_ucp.to_s}\n&quot;</span>
+          <span class='end end kw'>end</span>
+        <span class='rescue rescue kw'>rescue</span> <span class='ClientQuitError constant id'>ClientQuitError</span>
+          <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;*** #{name}:#{port} disconnected&quot;</span>
+        <span class='ensure ensure kw'>ensure</span>
+          <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='close identifier id'>close</span> <span class='comment val'># close socket on error</span>
+        <span class='end end kw'>end</span>
+
+        <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;*** done with #{name}:#{port}&quot;</span>
+        <span class='comment val'># end Thread</span>
+      <span class='end end kw'>end</span>
+
+      <span class='comment val'># end loop</span>
+    <span class='end end kw'>end</span>
+
+    <span class='comment val'># end Thread accept</span>
+  <span class='end end kw'>end</span>
+
+
+  <span class='comment val'># end initialize</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="stop-instance_method">
+  
+    - (<tt>Object</tt>) <strong>stop</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp_server.rb', line 101</span>
+
+<span class='def def kw'>def</span> <span class='stop identifier id'>stop</span>
+  <span class='@server ivar id'>@server</span><span class='dot token'>.</span><span class='close identifier id'>close</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Jan  9 23:49:16 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

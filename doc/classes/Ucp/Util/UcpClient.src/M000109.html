@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>send_alert (Ucp::Util::UcpClient)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/util/ucp_client.rb, line 181</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_alert</span>(<span class="ruby-identifier">recipient</span>,<span class="ruby-identifier">pid</span>)
+    <span class="ruby-identifier">ucp</span>=<span class="ruby-constant">Ucp31Operation</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">basic_alert</span>(<span class="ruby-identifier">recipient</span>,<span class="ruby-identifier">pid</span>)
+
+    <span class="ruby-identifier">trn</span>=<span class="ruby-constant">UCP</span>.<span class="ruby-identifier">int2hex</span>(<span class="ruby-ivar">@trn</span>)
+    <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">trn</span>=<span class="ruby-identifier">trn</span>
+    <span class="ruby-identifier">ans</span>=<span class="ruby-identifier">send_sync</span>(<span class="ruby-identifier">ucp</span>)
+    <span class="ruby-identifier">inc_trn</span>()
+<span class="ruby-comment cmt">#      puts &quot;e um ack: #{ans.nil?} ; #{ans.is_ack?}&quot;</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ans</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">ans</span>.<span class="ruby-identifier">is_ack?</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

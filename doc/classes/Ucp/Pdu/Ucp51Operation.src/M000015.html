@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>basic_submit (Ucp::Pdu::Ucp51Operation)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/pdu/ucp51_operation.rb, line 122</span>
+ <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">basic_submit</span>(<span class="ruby-identifier">originator</span>,<span class="ruby-identifier">recipient</span>,<span class="ruby-identifier">message</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">ucpfields</span>={})
+<span class="ruby-comment cmt">#    super()</span>
+<span class="ruby-comment cmt">#    @operation=&quot;51&quot;</span>
+<span class="ruby-comment cmt">#    @operation_type=&quot;O&quot;</span>
+<span class="ruby-comment cmt">#    @fields=[:adc,:oadc,:ac,:nrq,:nadc,:nt,:npid,:lrq,:lrad,:lpid,:dd,:ddt,:vp,:rpid,:scts,:dst,:rsn,:dscts,:mt,:nb,:msg,:mms,:pr,:dcs,:mcls,:rpi,:cpg,:rply,:otoa,:hplmn,:xser,:res4,:res5]</span>
+
+    <span class="ruby-comment cmt"># UCP51 supports IRA encoded SMS and 16 bits UCS2</span>
+    <span class="ruby-comment cmt"># for now assume IRA</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">message</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">msg</span>=<span class="ruby-constant">UCP</span>.<span class="ruby-identifier">ascii2ira</span>(<span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">mt</span>=<span class="ruby-value">3</span>
+
+
+    <span class="ruby-identifier">otoa</span>=<span class="ruby-value str">&quot;&quot;</span>
+
+    <span class="ruby-comment cmt"># UCP51 supports alphanumeric oadc</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">originator</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/^[0-9]+$/</span>
+      <span class="ruby-identifier">oadc</span>=<span class="ruby-constant">UCP</span>.<span class="ruby-identifier">packoadc</span>(<span class="ruby-identifier">originator</span>.<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-identifier">otoa</span>=<span class="ruby-value str">&quot;5039&quot;</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-identifier">oadc</span>=<span class="ruby-identifier">originator</span>
+    <span class="ruby-keyword kw">end</span>
+
+
+
+    <span class="ruby-ivar">@h</span>={<span class="ruby-identifier">:otoa=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">otoa</span>,<span class="ruby-identifier">:oadc=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">oadc</span>, <span class="ruby-identifier">:adc=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">recipient</span>, <span class="ruby-identifier">:msg=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">msg</span>,<span class="ruby-identifier">:mt=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">mt</span>}
+
+    <span class="ruby-ivar">@h</span>=<span class="ruby-ivar">@h</span>.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">ucpfields</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

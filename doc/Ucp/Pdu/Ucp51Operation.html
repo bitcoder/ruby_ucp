@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Class: Ucp::Pdu::Ucp51Operation</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (U)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../Ucp.html" title="Ucp (module)">Ucp</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Pdu.html" title="Ucp::Pdu (module)">Pdu</a></span></span>
+     &raquo; 
+    <span class="title">Ucp51Operation</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Ucp::Pdu::Ucp51Operation
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="UCP5x.html" title="Ucp::Pdu::UCP5x (class)">UCP5x</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="UCPMessage.html" title="Ucp::Pdu::UCPMessage (class)">UCPMessage</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="UCP5x.html" title="Ucp::Pdu::UCP5x (class)">UCP5x</a></span></li>
+          
+            <li class="next">Ucp::Pdu::Ucp51Operation</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/ucp/pdu/ucp51_operation.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+require &quot;ucp5x&quot; class Ucp51Operation &lt; UCP5x
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Ucp52Operation.html" title="Ucp::Pdu::Ucp52Operation (class)">Ucp52Operation</a></span>, <span class='object_link'><a href="Ucp53Operation.html" title="Ucp::Pdu::Ucp53Operation (class)">Ucp53Operation</a></span>, <span class='object_link'><a href="Ucp54Operation.html" title="Ucp::Pdu::Ucp54Operation (class)">Ucp54Operation</a></span>, <span class='object_link'><a href="Ucp55Operation.html" title="Ucp::Pdu::Ucp55Operation (class)">Ucp55Operation</a></span>, <span class='object_link'><a href="Ucp56Operation.html" title="Ucp::Pdu::Ucp56Operation (class)">Ucp56Operation</a></span>, <span class='object_link'><a href="Ucp57Operation.html" title="Ucp::Pdu::Ucp57Operation (class)">Ucp57Operation</a></span>, <span class='object_link'><a href="Ucp58Operation.html" title="Ucp::Pdu::Ucp58Operation (class)">Ucp58Operation</a></span></p>
+</div>
+
+  <h2>Constant Summary</h2>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Constants inherited from <span class='object_link'><a href="UCPMessage.html" title="Ucp::Pdu::UCPMessage (class)">UCPMessage</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="UCPMessage.html#DELIMITER-constant" title="Ucp::Pdu::UCPMessage::DELIMITER (constant)">DELIMITER</a></span>, <span class='object_link'><a href="UCPMessage.html#ETX-constant" title="Ucp::Pdu::UCPMessage::ETX (constant)">ETX</a></span>, <span class='object_link'><a href="UCPMessage.html#STX-constant" title="Ucp::Pdu::UCPMessage::STX (constant)">STX</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_xser-instance_method" title="#add_xser (instance method)">- (Object) <strong>add_xser</strong>(xser_id, xser_data) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_xser_raw-instance_method" title="#add_xser_raw (instance method)">- (Object) <strong>add_xser_raw</strong>(xser) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#basic_submit-instance_method" title="#basic_submit (instance method)">- (Object) <strong>basic_submit</strong>(originator, recipient, message = nil, ucpfields = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Ucp51Operation) <strong>initialize</strong>(fields = nil) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Ucp51Operation.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_xser-instance_method" title="#parse_xser (instance method)">- (Object) <strong>parse_xser</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="UCP5x.html" title="Ucp::Pdu::UCP5x (class)">UCP5x</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="UCP5x.html#initialize_message-instance_method" title="Ucp::Pdu::UCP5x#initialize_message (method)">#initialize_message</a></span>, <span class='object_link'><a href="UCP5x.html#set_fields-instance_method" title="Ucp::Pdu::UCP5x#set_fields (method)">#set_fields</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="UCPMessage.html" title="Ucp::Pdu::UCPMessage (class)">UCPMessage</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="UCPMessage.html#checksum-instance_method" title="Ucp::Pdu::UCPMessage#checksum (method)">#checksum</a></span>, <span class='object_link'><a href="UCPMessage.html#get_field-instance_method" title="Ucp::Pdu::UCPMessage#get_field (method)">#get_field</a></span>, <span class='object_link'><a href="UCPMessage.html#is_ack%3F-instance_method" title="Ucp::Pdu::UCPMessage#is_ack? (method)">#is_ack?</a></span>, <span class='object_link'><a href="UCPMessage.html#is_nack%3F-instance_method" title="Ucp::Pdu::UCPMessage#is_nack? (method)">#is_nack?</a></span>, <span class='object_link'><a href="UCPMessage.html#is_operation%3F-instance_method" title="Ucp::Pdu::UCPMessage#is_operation? (method)">#is_operation?</a></span>, <span class='object_link'><a href="UCPMessage.html#is_result%3F-instance_method" title="Ucp::Pdu::UCPMessage#is_result? (method)">#is_result?</a></span>, <span class='object_link'><a href="UCPMessage.html#length-instance_method" title="Ucp::Pdu::UCPMessage#length (method)">#length</a></span>, <span class='object_link'><a href="UCPMessage.html#set_field-instance_method" title="Ucp::Pdu::UCPMessage#set_field (method)">#set_field</a></span>, <span class='object_link'><a href="UCPMessage.html#set_fields-instance_method" title="Ucp::Pdu::UCPMessage#set_fields (method)">#set_fields</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Ucp::Pdu::Ucp51Operation (class)">Ucp51Operation</a></span></tt>) <strong>initialize</strong>(fields = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Ucp51Operation
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/pdu/ucp51_operation.rb', line 6</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='fields identifier id'>fields</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='super super kw'>super</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='@operation ivar id'>@operation</span><span class='assign token'>=</span><span class='string val'>&quot;51&quot;</span>
+  <span class='@operation_type ivar id'>@operation_type</span><span class='assign token'>=</span><span class='string val'>&quot;O&quot;</span>
+  <span class='comment val'>#@fields=[:adc,:oadc,:ac,:nrq,:nadc,:nt,:npid,:lrq,:lrad,:lpid,:dd,:ddt,:vp,:rpid,:scts,:dst,:rsn,:dscts,:mt,:nb,:msg,:mms,:pr,:dcs,:mcls,:rpi,:cpg,:rply,:otoa,:hplmn,:xser,:res4,:res5]</span>
+  
+  <span class='if if kw'>if</span> <span class='fields identifier id'>fields</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+    <span class='return return kw'>return</span>
+  <span class='end end kw'>end</span>
+
+  
+  <span class='@trn ivar id'>@trn</span><span class='assign token'>=</span><span class='fields identifier id'>fields</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+  <span class='@operation_type ivar id'>@operation_type</span><span class='assign token'>=</span><span class='fields identifier id'>fields</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+  <span class='@operation ivar id'>@operation</span><span class='assign token'>=</span><span class='fields identifier id'>fields</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='rbrack token'>]</span>
+<span class='comment val'>#    *00/00352/O/51/961234567/1234/////////////////4/1072/31D98C56B3DD7039584C36A3D56C375C0E1693CD6835DB0D9783C564335ACD76C3E56031D98C56B3DD7039584C36A3D56C375C0E1693CD6835DB0D9783C564335ACD76C3E56031D98C56B3DD7039584C36A3D56C375C0E1693CD6835DB0D9783C564335ACD76C3E56031D98C56B3DD7039584C36A3D56C375C0E1693CD6835DB0D9783C56433//////////0106050003450201///44#</span>
+
+   <span class='for for kw'>for</span> <span class='i identifier id'>i</span> <span class='in in kw'>in</span> <span class='float val'>4</span><span class='dot2 op'>..</span><span class='lparen token'>(</span><span class='fields identifier id'>fields</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='minus op'>-</span><span class='integer val'>1</span><span class='rparen token'>)</span>
+     <span class='field identifier id'>field</span><span class='assign token'>=</span><span class='@fields ivar id'>@fields</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='minus op'>-</span><span class='integer val'>4</span><span class='rbrack token'>]</span>
+     <span class='if if kw'>if</span> <span class='field identifier id'>field</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='symbol val'>:xser</span><span class='rparen token'>)</span>
+       <span class='add_xser_raw identifier id'>add_xser_raw</span><span class='lparen token'>(</span><span class='fields identifier id'>fields</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+     <span class='else else kw'>else</span>
+       <span class='@h ivar id'>@h</span><span class='lbrack token'>[</span><span class='field identifier id'>field</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='fields identifier id'>fields</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='rbrack token'>]</span>
+     <span class='end end kw'>end</span>
+   <span class='end end kw'>end</span>
+   
+   <span class='parse_xser identifier id'>parse_xser</span>
+
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="add_xser-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_xser</strong>(xser_id, xser_data) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/pdu/ucp51_operation.rb', line 96</span>
+
+<span class='def def kw'>def</span> <span class='add_xser identifier id'>add_xser</span><span class='lparen token'>(</span><span class='xser_id identifier id'>xser_id</span><span class='comma token'>,</span><span class='xser_data identifier id'>xser_data</span><span class='rparen token'>)</span>
+  <span class='xser identifier id'>xser</span><span class='assign token'>=</span><span class='xser_id identifier id'>xser_id</span><span class='plus op'>+</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='int2hex identifier id'>int2hex</span><span class='lparen token'>(</span><span class='xser_data identifier id'>xser_data</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='div op'>/</span><span class='integer val'>2</span><span class='rparen token'>)</span><span class='plus op'>+</span><span class='xser_data identifier id'>xser_data</span>
+  <span class='@xservices ivar id'>@xservices</span> <span class='lshft op'>&lt;&lt;</span> <span class='xser identifier id'>xser</span>
+
+  <span class='if if kw'>if</span> <span class='xser_id identifier id'>xser_id</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;02&quot;</span><span class='rparen token'>)</span>
+    <span class='@dcs ivar id'>@dcs</span><span class='assign token'>=</span><span class='xser_data identifier id'>xser_data</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="add_xser_raw-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_xser_raw</strong>(xser) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/pdu/ucp51_operation.rb', line 77</span>
+
+<span class='def def kw'>def</span> <span class='add_xser_raw identifier id'>add_xser_raw</span><span class='lparen token'>(</span><span class='xser identifier id'>xser</span><span class='rparen token'>)</span>
+
+ <span class='comment val'># nao faz parsing/decode do xser</span>
+ <span class='comment val'>#@xservices &lt;&lt; xser</span>
+
+  <span class='comment val'># partir os xservices, por form a fazer parsing dos mesmos e adiciona-los um a um</span>
+  <span class='idx identifier id'>idx</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='while while kw'>while</span> <span class='idx identifier id'>idx</span><span class='lt op'>&lt;</span><span class='xser identifier id'>xser</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+   <span class='xser_id identifier id'>xser_id</span><span class='assign token'>=</span><span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='idx identifier id'>idx</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+   <span class='xser_len identifier id'>xser_len</span><span class='assign token'>=</span><span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='idx identifier id'>idx</span><span class='plus op'>+</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span>
+   <span class='xser_data identifier id'>xser_data</span><span class='assign token'>=</span><span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='idx identifier id'>idx</span><span class='plus op'>+</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='xser_len identifier id'>xser_len</span><span class='mult op'>*</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+
+   <span class='comment val'>#puts &quot;xxx_serid: #{xser_id} ; #{xser_data}&quot;</span>
+   <span class='add_xser identifier id'>add_xser</span><span class='lparen token'>(</span><span class='xser_id identifier id'>xser_id</span><span class='comma token'>,</span><span class='xser_data identifier id'>xser_data</span><span class='rparen token'>)</span>
+   <span class='idx identifier id'>idx</span><span class='opasgn op'>+=</span><span class='lparen token'>(</span><span class='xser_len identifier id'>xser_len</span><span class='plus op'>+</span><span class='integer val'>2</span><span class='rparen token'>)</span><span class='mult op'>*</span><span class='integer val'>2</span>
+  <span class='end end kw'>end</span>
+
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="basic_submit-instance_method">
+  
+    - (<tt>Object</tt>) <strong>basic_submit</strong>(originator, recipient, message = nil, ucpfields = {}) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/pdu/ucp51_operation.rb', line 105</span>
+
+<span class='def def kw'>def</span> <span class='basic_submit identifier id'>basic_submit</span><span class='lparen token'>(</span><span class='originator identifier id'>originator</span><span class='comma token'>,</span><span class='recipient identifier id'>recipient</span><span class='comma token'>,</span><span class='message identifier id'>message</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='comma token'>,</span><span class='ucpfields identifier id'>ucpfields</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+<span class='comment val'>#    super()</span>
+<span class='comment val'>#    @operation=&quot;51&quot;</span>
+<span class='comment val'>#    @operation_type=&quot;O&quot;</span>
+<span class='comment val'>#    @fields=[:adc,:oadc,:ac,:nrq,:nadc,:nt,:npid,:lrq,:lrad,:lpid,:dd,:ddt,:vp,:rpid,:scts,:dst,:rsn,:dscts,:mt,:nb,:msg,:mms,:pr,:dcs,:mcls,:rpi,:cpg,:rply,:otoa,:hplmn,:xser,:res4,:res5]</span>
+
+  <span class='comment val'># UCP51 supports IRA encoded SMS and 16 bits UCS2</span>
+  <span class='comment val'># for now assume IRA</span>
+  <span class='if if kw'>if</span> <span class='notop op'>!</span><span class='message identifier id'>message</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+    <span class='msg identifier id'>msg</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='ascii2ira identifier id'>ascii2ira</span><span class='lparen token'>(</span><span class='message identifier id'>message</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+  <span class='mt identifier id'>mt</span><span class='assign token'>=</span><span class='integer val'>3</span>
+
+
+  <span class='otoa identifier id'>otoa</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+
+  <span class='comment val'># UCP51 supports alphanumeric oadc</span>
+  <span class='if if kw'>if</span> <span class='originator identifier id'>originator</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span> <span class='nmatch op'>!~</span> <span class='regexp val'>/^[0-9]+$/</span>
+    <span class='oadc identifier id'>oadc</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='packoadc identifier id'>packoadc</span><span class='lparen token'>(</span><span class='originator identifier id'>originator</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='rparen token'>)</span>
+    <span class='otoa identifier id'>otoa</span><span class='assign token'>=</span><span class='string val'>&quot;5039&quot;</span>
+  <span class='else else kw'>else</span>
+    <span class='oadc identifier id'>oadc</span><span class='assign token'>=</span><span class='originator identifier id'>originator</span>
+  <span class='end end kw'>end</span>
+
+
+
+  <span class='@h ivar id'>@h</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='symbol val'>:otoa=</span><span class='gt op'>&gt;</span><span class='otoa identifier id'>otoa</span><span class='comma token'>,</span><span class='symbol val'>:oadc=</span><span class='gt op'>&gt;</span><span class='oadc identifier id'>oadc</span><span class='comma token'>,</span> <span class='symbol val'>:adc=</span><span class='gt op'>&gt;</span><span class='recipient identifier id'>recipient</span><span class='comma token'>,</span> <span class='symbol val'>:msg=</span><span class='gt op'>&gt;</span><span class='msg identifier id'>msg</span><span class='comma token'>,</span><span class='symbol val'>:mt=</span><span class='gt op'>&gt;</span><span class='mt identifier id'>mt</span><span class='rbrace token'>}</span>
+
+  <span class='@h ivar id'>@h</span><span class='assign token'>=</span><span class='@h ivar id'>@h</span><span class='dot token'>.</span><span class='merge identifier id'>merge</span> <span class='ucpfields identifier id'>ucpfields</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="parse_xser-instance_method">
+  
+    - (<tt>Object</tt>) <strong>parse_xser</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/pdu/ucp51_operation.rb', line 41</span>
+
+<span class='def def kw'>def</span> <span class='parse_xser identifier id'>parse_xser</span>
+  <span class='@xservices ivar id'>@xservices</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='xser identifier id'>xser</span><span class='bitor op'>|</span>
+
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;xser_id: #{xser[0,2]}&quot;</span>
+    
+    <span class='if if kw'>if</span> <span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;01&quot;</span><span class='rparen token'>)</span>
+       <span class='header identifier id'>header</span><span class='assign token'>=</span><span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='mult op'>*</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+       <span class='header_len identifier id'>header_len</span><span class='assign token'>=</span><span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span>
+       <span class='comment val'>#puts &quot;header: #{header}; hlen: #{header_len}&quot;</span>
+
+       <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='integer val'>2</span>
+       <span class='while while kw'>while</span> <span class='i identifier id'>i</span><span class='lt op'>&lt;</span><span class='header identifier id'>header</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+         <span class='ie identifier id'>ie</span><span class='assign token'>=</span><span class='header identifier id'>header</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span> <span class='header identifier id'>header</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='plus op'>+</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='mult op'>*</span><span class='integer val'>2</span><span class='plus op'>+</span><span class='integer val'>4</span><span class='rbrack token'>]</span>
+         <span class='iei identifier id'>iei</span><span class='assign token'>=</span><span class='header identifier id'>header</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+         <span class='iel identifier id'>iel</span><span class='assign token'>=</span><span class='header identifier id'>header</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='plus op'>+</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span>
+         <span class='comment val'>#puts &quot;ie: #{ie}&quot;</span>
+
+         <span class='if if kw'>if</span> <span class='iei identifier id'>iei</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;00&quot;</span><span class='rparen token'>)</span>
+           <span class='@message_ref ivar id'>@message_ref</span><span class='assign token'>=</span><span class='ie identifier id'>ie</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span>
+           <span class='@total_parts ivar id'>@total_parts</span><span class='assign token'>=</span><span class='ie identifier id'>ie</span><span class='lbrack token'>[</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span>
+           <span class='@part_nr ivar id'>@part_nr</span><span class='assign token'>=</span><span class='ie identifier id'>ie</span><span class='lbrack token'>[</span><span class='integer val'>8</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span>
+           <span class='comment val'>#puts &quot;part_info: MR=#{@message_ref}; PN=#{@part_nr} PT=#{@total_parts}&quot;</span>
+           <span class='break break kw'>break</span>
+         <span class='end end kw'>end</span>
+         <span class='i identifier id'>i</span><span class='opasgn op'>+=</span><span class='iel identifier id'>iel</span><span class='mult op'>*</span><span class='integer val'>2</span>
+       <span class='end end kw'>end</span>       
+    <span class='elsif elsif kw'>elsif</span> <span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;02&quot;</span><span class='rparen token'>)</span>
+      <span class='@dcs ivar id'>@dcs</span><span class='assign token'>=</span><span class='xser identifier id'>xser</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+    <span class='end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+
+  <span class='comment val'># no parts info</span>
+  <span class='return return kw'>return</span> <span class='nil nil kw'>nil</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_s-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_s</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/pdu/ucp51_operation.rb', line 136</span>
+
+<span class='def def kw'>def</span> <span class='to_s identifier id'>to_s</span>
+
+ <span class='xserstr identifier id'>xserstr</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+ <span class='if if kw'>if</span> <span class='notop op'>!</span><span class='@xservices ivar id'>@xservices</span><span class='dot token'>.</span><span class='empty? fid id'>empty?</span>
+   <span class='@xservices ivar id'>@xservices</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='xser identifier id'>xser</span><span class='bitor op'>|</span>
+    <span class='xserstr identifier id'>xserstr</span><span class='opasgn op'>+=</span><span class='xser identifier id'>xser</span>
+   <span class='rbrace token'>}</span>
+   <span class='@h ivar id'>@h</span><span class='lbrack token'>[</span><span class='symbol val'>:xser</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='xserstr identifier id'>xserstr</span>
+ <span class='end end kw'>end</span>
+
+ <span class='super super kw'>super</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Jan  9 23:49:14 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

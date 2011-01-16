@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Ucp::Pdu::UCPMessage)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/pdu/ucpmessage.rb, line 40</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>()
+    <span class="ruby-ivar">@dcs</span>=<span class="ruby-value str">&quot;01&quot;</span>
+
+    <span class="ruby-ivar">@trn</span>=<span class="ruby-value str">&quot;00&quot;</span>
+    <span class="ruby-ivar">@fields</span>=[]
+    <span class="ruby-ivar">@h</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+
+    <span class="ruby-ivar">@message_ref</span>=<span class="ruby-value">0</span>
+    <span class="ruby-ivar">@part_nr</span>=<span class="ruby-value">1</span>
+    <span class="ruby-ivar">@total_parts</span>=<span class="ruby-value">1</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

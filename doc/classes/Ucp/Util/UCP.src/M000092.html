@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>make_ucp_result (Ucp::Util::UCP)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/util/ucp.rb, line 763</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">make_ucp_result</span>(<span class="ruby-identifier">ucp</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;make_ucp_result(#{ucp.to_s})&quot;</span>
+
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">trn</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">trn</span>
+    <span class="ruby-comment cmt">#puts &quot;#{trn}&quot;</span>
+    <span class="ruby-comment cmt"># length</span>
+    <span class="ruby-identifier">operation_type</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">operation_type</span>
+    <span class="ruby-comment cmt">#puts &quot;#{operation_type}&quot;</span>
+    <span class="ruby-identifier">operation</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">operation</span>
+    <span class="ruby-comment cmt">#puts &quot;#{operation}&quot;</span>
+
+    <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-keyword kw">nil</span>
+
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;01&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp01Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;30&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp30Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;31&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp31Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;51&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp51Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;52&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp52Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;53&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp53Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;54&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp54Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;55&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp55Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;56&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp56Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;57&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp57Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;58&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp58Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;60&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp60Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;61&quot;</span>)
+      <span class="ruby-identifier">ucpmsg</span>=<span class="ruby-constant">Ucp61Result</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">ucpmsg</span>.<span class="ruby-identifier">trn</span>=<span class="ruby-identifier">trn</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">ucpmsg</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

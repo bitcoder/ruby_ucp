@@ -1,0 +1,2813 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Class: Ucp::Util::UCP</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (U)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../Ucp.html" title="Ucp (module)">Ucp</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Util.html" title="Ucp::Util (module)">Util</a></span></span>
+     &raquo; 
+    <span class="title">UCP</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Ucp::Util::UCP
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Ucp::Util::UCP</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/ucp/util/ucp.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_char-class_method" title="add_char (class method)">+ (Object) <strong>add_char</strong>(value, char) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_extchar-class_method" title="add_extchar (class method)">+ (Object) <strong>add_extchar</strong>(value, char) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ascii2ira-class_method" title="ascii2ira (class method)">+ (Object) <strong>ascii2ira</strong>(str, max_bytes = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+convert standard string to IRA encoded
+</p>
+<ul>
+<li>an excelent method.
+
+</li>
+</ul>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode7bitgsm-class_method" title="decode7bitgsm (class method)">+ (Object) <strong>decode7bitgsm</strong>(str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_ira-class_method" title="decode_ira (class method)">+ (Object) <strong>decode_ira</strong>(str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_ucp_msg-class_method" title="decode_ucp_msg (class method)">+ (Object) <strong>decode_ucp_msg</strong>(ucp) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_ucp_oadc-class_method" title="decode_ucp_oadc (class method)">+ (Object) <strong>decode_ucp_oadc</strong>(ucp) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hex2str-class_method" title="hex2str (class method)">+ (Object) <strong>hex2str</strong>(hexstr) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hextobin-class_method" title="hextobin (class method)">+ (Object) <strong>hextobin</strong>(hstr) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hextobin_reversed-class_method" title="hextobin_reversed (class method)">+ (Object) <strong>hextobin_reversed</strong>(hstr) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_ascii2ira-class_method" title="initialize_ascii2ira (class method)">+ (Object) <strong>initialize_ascii2ira</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#int2hex-class_method" title="int2hex (class method)">+ (Object) <strong>int2hex</strong>(i, max_nibbles = 2) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_multi_ucps-class_method" title="make_multi_ucps (class method)">+ (Object) <strong>make_multi_ucps</strong>(originator, recipient, message, mr = 0) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_ucp_result-class_method" title="make_ucp_result (class method)">+ (Object) <strong>make_ucp_result</strong>(ucp) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+usado para construir uma resposta UCP a partir dum UCP.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#multi_ascii2ira-class_method" title="multi_ascii2ira (class method)">+ (Object) <strong>multi_ascii2ira</strong>(str, max_bytes) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#multi_pack7bits2-class_method" title="multi_pack7bits2 (class method)">+ (Object) <strong>multi_pack7bits2</strong>(str, max_bytes) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#multi_ucs2-class_method" title="multi_ucs2 (class method)">+ (Object) <strong>multi_ucs2</strong>(str, max_bytes) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pack7bits-class_method" title="pack7bits (class method)">+ (Object) <strong>pack7bits</strong>(str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pack7bits2-class_method" title="pack7bits2 (class method)">+ (Object) <strong>pack7bits2</strong>(str, max_bytes) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#packoadc-class_method" title="packoadc (class method)">+ (Object) <strong>packoadc</strong>(oa) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#packucs2-class_method" title="packucs2 (class method)">+ (Object) <strong>packucs2</strong>(str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_str-class_method" title="parse_str (class method)">+ (Object) <strong>parse_str</strong>(ustr) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+usado para construir um UCP duma string.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#str2ucs2-class_method" title="str2ucs2 (class method)">+ (Object) <strong>str2ucs2</strong>(str, max_bytes = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#utf8_substr-class_method" title="utf8_substr (class method)">+ (Object) <strong>utf8_substr</strong>(str, idxs, idxe = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="add_char-class_method">
+  
+    + (<tt>Object</tt>) <strong>add_char</strong>(value, char) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 28</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='comma token'>,</span><span class='char identifier id'>char</span><span class='rparen token'>)</span>
+  <span class='@gsmtable ivar id'>@gsmtable</span><span class='lbrack token'>[</span><span class='char identifier id'>char</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='value identifier id'>value</span>
+  <span class='@asciitable ivar id'>@asciitable</span><span class='lbrack token'>[</span><span class='value identifier id'>value</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='char identifier id'>char</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="add_extchar-class_method">
+  
+    + (<tt>Object</tt>) <strong>add_extchar</strong>(value, char) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 34</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='value identifier id'>value</span><span class='comma token'>,</span><span class='char identifier id'>char</span><span class='rparen token'>)</span>
+  <span class='@extensiontable ivar id'>@extensiontable</span><span class='lbrack token'>[</span><span class='char identifier id'>char</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='value identifier id'>value</span>
+  <span class='@extensiontable_rev ivar id'>@extensiontable_rev</span><span class='lbrack token'>[</span><span class='value identifier id'>value</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='char identifier id'>char</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ascii2ira-class_method">
+  
+    + (<tt>Object</tt>) <strong>ascii2ira</strong>(str, max_bytes = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+convert standard string to IRA encoded
+</p>
+<ul>
+<li>an excelent method
+
+</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 273</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ascii2ira identifier id'>ascii2ira</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+  
+  <span class='tainted identifier id'>tainted</span><span class='assign token'>=</span><span class='false false kw'>false</span>  <span class='comment val'># true if not able to convert a character</span>
+  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='idx identifier id'>idx</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='each_char identifier id'>each_char</span>  <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+    <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@gsmtable ivar id'>@gsmtable</span><span class='lbrack token'>[</span><span class='c identifier id'>c</span><span class='rbrack token'>]</span>
+
+    <span class='ext identifier id'>ext</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+    <span class='if if kw'>if</span> <span class='gsmchar identifier id'>gsmchar</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='if if kw'>if</span> <span class='@extensiontable ivar id'>@extensiontable</span><span class='dot token'>.</span><span class='has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='c identifier id'>c</span><span class='rparen token'>)</span>
+        <span class='ext identifier id'>ext</span><span class='assign token'>=</span><span class='string val'>&quot;1B&quot;</span>
+        <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@extensiontable ivar id'>@extensiontable</span><span class='lbrack token'>[</span><span class='c identifier id'>c</span><span class='rbrack token'>]</span>
+      <span class='else else kw'>else</span>
+        <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@gsmtable ivar id'>@gsmtable</span><span class='lbrack token'>[</span><span class='string val'>&quot; &quot;</span><span class='rbrack token'>]</span>
+        <span class='tainted identifier id'>tainted</span><span class='assign token'>=</span><span class='true true kw'>true</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+
+
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='int2hex identifier id'>int2hex</span><span class='lparen token'>(</span><span class='gsmchar identifier id'>gsmchar</span><span class='rparen token'>)</span>
+
+
+    <span class='if if kw'>if</span> <span class='notop op'>!</span><span class='max_bytes identifier id'>max_bytes</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='comment val'># if adding this character exceeds the max allowed nr of bytes, break</span>
+      <span class='if if kw'>if</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='tmp identifier id'>tmp</span><span class='plus op'>+</span><span class='ext identifier id'>ext</span><span class='plus op'>+</span><span class='s identifier id'>s</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mult op'>*</span><span class='float val'>7.0</span><span class='div op'>/</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='ceil identifier id'>ceil</span><span class='gt op'>&gt;</span><span class='max_bytes identifier id'>max_bytes</span>
+        <span class='break break kw'>break</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+
+    <span class='s identifier id'>s</span><span class='opasgn op'>+=</span><span class='ext identifier id'>ext</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='idx identifier id'>idx</span><span class='opasgn op'>+=</span><span class='lparen token'>(</span><span class='ext identifier id'>ext</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='div op'>/</span><span class='integer val'>2</span>
+
+    <span class='comment val'># if reached the max allowed nr of bytes, break</span>
+<span class='comment val'>#    if (s.length*7.0/16).floor==max_bytes</span>
+<span class='comment val'>#      break</span>
+<span class='comment val'>#    end</span>
+
+  <span class='rbrace token'>}</span>
+
+  <span class='required_septets identifier id'>required_septets</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='div op'>/</span><span class='integer val'>2</span>
+  <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;idx: #{idx}; req_sep: #{required_septets}&quot;</span>
+  <span class='return return kw'>return</span> <span class='GsmPackedMsg constant id'>GsmPackedMsg</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='s identifier id'>s</span><span class='comma token'>,</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='utf8_substr identifier id'>utf8_substr</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='idx identifier id'>idx</span><span class='minus op'>-</span><span class='integer val'>1</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='idx identifier id'>idx</span><span class='comma token'>,</span><span class='required_septets identifier id'>required_septets</span><span class='comma token'>,</span><span class='tainted identifier id'>tainted</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="decode7bitgsm-class_method">
+  
+    + (<tt>Object</tt>) <strong>decode7bitgsm</strong>(str) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 524</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='decode7bitgsm identifier id'>decode7bitgsm</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='rparen token'>)</span>
+  
+  <span class='comment val'># retirar isto!!</span>
+  <span class='comment val'>#initialize_ascii2ira</span>
+  
+  <span class='unencoded identifier id'>unencoded</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+<span class='comment val'>#puts &quot;#{str}&quot;</span>
+  <span class='bstr identifier id'>bstr</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='hextobin_reversed identifier id'>hextobin_reversed</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='rparen token'>)</span>
+<span class='comment val'>#puts &quot;#{bstr}&quot;</span>
+<span class='comment val'># 110 1111 110 1100 110 0001</span>
+<span class='comment val'># 1000011 1011101 0110111   000</span>
+
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='bstr identifier id'>bstr</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='minus op'>-</span><span class='integer val'>7</span>
+  <span class='while while kw'>while</span> <span class='i identifier id'>i</span><span class='geq op'>&gt;=</span><span class='integer val'>0</span>
+    <span class='value identifier id'>value</span><span class='assign token'>=</span><span class='bstr identifier id'>bstr</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='value identifier id'>value</span><span class='eq op'>==</span><span class='integer val'>0x1</span><span class='B constant id'>B</span>
+      <span class='i identifier id'>i</span><span class='opasgn op'>-=</span><span class='integer val'>7</span>
+      <span class='value identifier id'>value</span><span class='assign token'>=</span><span class='@extensiontable_rev ivar id'>@extensiontable_rev</span><span class='lbrack token'>[</span><span class='bstr identifier id'>bstr</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span><span class='rbrack token'>]</span>
+      <span class='value identifier id'>value</span><span class='assign token'>=</span><span class='string val'>&quot; &quot;</span> <span class='if if_mod kw'>if</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='unencoded identifier id'>unencoded</span><span class='opasgn op'>+=</span><span class='value identifier id'>value</span>
+    <span class='else else kw'>else</span>
+      <span class='val identifier id'>val</span><span class='assign token'>=</span><span class='@asciitable ivar id'>@asciitable</span><span class='lbrack token'>[</span><span class='value identifier id'>value</span><span class='rbrack token'>]</span>
+      <span class='comment val'>#puts &quot;value: #{value} ; val: #{val}&quot;</span>
+      <span class='val identifier id'>val</span><span class='assign token'>=</span><span class='string val'>&quot; &quot;</span> <span class='if if_mod kw'>if</span> <span class='val identifier id'>val</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='unencoded identifier id'>unencoded</span><span class='opasgn op'>+=</span><span class='val identifier id'>val</span>
+      <span class='comment val'>#unencoded+=value.chr</span>
+    <span class='end end kw'>end</span>
+
+
+    
+
+    <span class='i identifier id'>i</span><span class='opasgn op'>-=</span><span class='integer val'>7</span>
+  <span class='end end kw'>end</span>
+
+
+<span class='comment val'>#    i=0</span>
+<span class='comment val'>#    while i&lt;str.length</span>
+<span class='comment val'>#      hexv=str[i,2]</span>
+<span class='comment val'>#      if &quot;1B&quot;.eql?(hexv)</span>
+<span class='comment val'>#        i+=2</span>
+<span class='comment val'>#        hexv=str[i,2]</span>
+<span class='comment val'>#      end</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#      unencoded+=hexv.to_i(16).chr</span>
+<span class='comment val'>#</span>
+<span class='comment val'>#      i+=2</span>
+<span class='comment val'>#    end</span>
+
+
+  <span class='return return kw'>return</span> <span class='unencoded identifier id'>unencoded</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="decode_ira-class_method">
+  
+    + (<tt>Object</tt>) <strong>decode_ira</strong>(str) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 578</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='decode_ira identifier id'>decode_ira</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='rparen token'>)</span>
+  <span class='unencoded identifier id'>unencoded</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='while while kw'>while</span> <span class='i identifier id'>i</span><span class='lt op'>&lt;</span><span class='str identifier id'>str</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+    <span class='hexv identifier id'>hexv</span><span class='assign token'>=</span><span class='str identifier id'>str</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+    <span class='if if kw'>if</span> <span class='string val'>&quot;1B&quot;</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='hexv identifier id'>hexv</span><span class='rparen token'>)</span>
+      <span class='i identifier id'>i</span><span class='opasgn op'>+=</span><span class='integer val'>2</span>
+      <span class='hexv identifier id'>hexv</span><span class='assign token'>=</span><span class='str identifier id'>str</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+
+      <span class='value identifier id'>value</span><span class='assign token'>=</span><span class='@extensiontable_rev ivar id'>@extensiontable_rev</span><span class='lbrack token'>[</span><span class='hexv identifier id'>hexv</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='rbrack token'>]</span>
+      <span class='value identifier id'>value</span><span class='assign token'>=</span><span class='string val'>&quot; &quot;</span> <span class='if if_mod kw'>if</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='unencoded identifier id'>unencoded</span><span class='opasgn op'>+=</span><span class='value identifier id'>value</span>
+    <span class='else else kw'>else</span>
+      <span class='val identifier id'>val</span><span class='assign token'>=</span><span class='@asciitable ivar id'>@asciitable</span><span class='lbrack token'>[</span><span class='hexv identifier id'>hexv</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='rbrack token'>]</span>
+      <span class='val identifier id'>val</span><span class='assign token'>=</span><span class='string val'>&quot; &quot;</span> <span class='if if_mod kw'>if</span> <span class='val identifier id'>val</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='unencoded identifier id'>unencoded</span><span class='opasgn op'>+=</span><span class='val identifier id'>val</span>
+    <span class='end end kw'>end</span>
+
+    <span class='i identifier id'>i</span><span class='opasgn op'>+=</span><span class='integer val'>2</span>
+  <span class='end end kw'>end</span>
+
+  <span class='return return kw'>return</span> <span class='unencoded identifier id'>unencoded</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="decode_ucp_msg-class_method">
+  
+    + (<tt>Object</tt>) <strong>decode_ucp_msg</strong>(ucp) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 812</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='decode_ucp_msg identifier id'>decode_ucp_msg</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='rparen token'>)</span>
+  <span class='text identifier id'>text</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span>
+  <span class='dcs identifier id'>dcs</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='dcs identifier id'>dcs</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span>
+
+  <span class='if if kw'>if</span> <span class='lparen token'>(</span><span class='dcs identifier id'>dcs</span> <span class='bitand op'>&amp;</span> <span class='integer val'>0x0</span><span class='F constant id'>F</span> <span class='eq op'>==</span> <span class='integer val'>0x01</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='lparen token'>(</span><span class='dcs identifier id'>dcs</span> <span class='bitand op'>&amp;</span> <span class='integer val'>0x0</span><span class='F constant id'>F</span> <span class='eq op'>==</span> <span class='integer val'>0x00</span><span class='rparen token'>)</span>
+
+    <span class='if if kw'>if</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;30&quot;</span><span class='rparen token'>)</span>
+      <span class='text identifier id'>text</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='decode_ira identifier id'>decode_ira</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:amsg</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='else else kw'>else</span>
+
+      <span class='if if kw'>if</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;51&quot;</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;52&quot;</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;53&quot;</span><span class='rparen token'>)</span>
+        <span class='mt identifier id'>mt</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:msg</span><span class='rparen token'>)</span>
+        <span class='if if kw'>if</span> <span class='mt identifier id'>mt</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;2&quot;</span><span class='rparen token'>)</span>
+          <span class='comment val'># numeric message.. return it as it is</span>
+          <span class='text identifier id'>text</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:msg</span><span class='rparen token'>)</span>
+        <span class='elsif elsif kw'>elsif</span> <span class='mt identifier id'>mt</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;3&quot;</span><span class='rparen token'>)</span>
+          <span class='text identifier id'>text</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='decode_ira identifier id'>decode_ira</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:msg</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+        <span class='else else kw'>else</span>
+            <span class='comment val'># unexpected &quot;mt&quot; value. return nil explicitely</span>
+            <span class='return return kw'>return</span> <span class='nil nil kw'>nil</span>
+        <span class='end end kw'>end</span>
+      <span class='elsif elsif kw'>elsif</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;01&quot;</span><span class='rparen token'>)</span>
+        <span class='text identifier id'>text</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='decode_ira identifier id'>decode_ira</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:msg</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+      <span class='else else kw'>else</span>
+        <span class='comment val'># unexpected operation. return nil explicitely</span>
+        <span class='return return kw'>return</span> <span class='nil nil kw'>nil</span>
+      <span class='end end kw'>end</span>
+
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='lparen token'>(</span><span class='dcs identifier id'>dcs</span> <span class='bitand op'>&amp;</span> <span class='integer val'>0x0</span><span class='F constant id'>F</span> <span class='eq op'>==</span> <span class='integer val'>0x08</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='lparen token'>(</span><span class='dcs identifier id'>dcs</span> <span class='bitand op'>&amp;</span> <span class='integer val'>0x0</span><span class='F constant id'>F</span> <span class='eq op'>==</span> <span class='integer val'>0x09</span><span class='rparen token'>)</span>
+    <span class='str identifier id'>str</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='hex2str identifier id'>hex2str</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:msg</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='text identifier id'>text</span><span class='assign token'>=</span><span class='Iconv constant id'>Iconv</span><span class='dot token'>.</span><span class='iconv identifier id'>iconv</span><span class='lparen token'>(</span><span class='string val'>&quot;utf-8&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;utf-16be&quot;</span><span class='comma token'>,</span><span class='str identifier id'>str</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span>
+  <span class='else else kw'>else</span>
+    <span class='comment val'># cant decode text; unsupported DCS</span>
+    <span class='return return kw'>return</span> <span class='nil nil kw'>nil</span>
+  <span class='end end kw'>end</span>
+
+  <span class='return return kw'>return</span> <span class='text identifier id'>text</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="decode_ucp_oadc-class_method">
+  
+    + (<tt>Object</tt>) <strong>decode_ucp_oadc</strong>(ucp) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 852</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='decode_ucp_oadc identifier id'>decode_ucp_oadc</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='rparen token'>)</span>
+  <span class='otoa identifier id'>otoa</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span>
+  <span class='oadc identifier id'>oadc</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:oadc</span><span class='rparen token'>)</span>
+
+  <span class='if if kw'>if</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp51Operation constant id'>Ucp51Operation</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp52Operation constant id'>Ucp52Operation</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp53Operation constant id'>Ucp53Operation</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp54Operation constant id'>Ucp54Operation</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp55Operation constant id'>Ucp55Operation</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp56Operation constant id'>Ucp56Operation</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp57Operation constant id'>Ucp57Operation</span><span class='rparen token'>)</span> <span class='orop op'>||</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='Ucp58Operation constant id'>Ucp58Operation</span><span class='rparen token'>)</span>
+    <span class='otoa identifier id'>otoa</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='get_field identifier id'>get_field</span><span class='lparen token'>(</span><span class='symbol val'>:otoa</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+
+  <span class='if if kw'>if</span> <span class='otoa identifier id'>otoa</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='otoa identifier id'>otoa</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;1139&quot;</span><span class='rparen token'>)</span>
+    <span class='return return kw'>return</span> <span class='oadc identifier id'>oadc</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='otoa identifier id'>otoa</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;5039&quot;</span><span class='rparen token'>)</span>
+    <span class='comment val'>#useful_nibbles=oadc[0,2].to_i(16)</span>
+    <span class='return return kw'>return</span> <span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='decode7bitgsm identifier id'>decode7bitgsm</span><span class='lparen token'>(</span><span class='oadc identifier id'>oadc</span><span class='lbrack token'>[</span><span class='float val'>2</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='else else kw'>else</span>
+    <span class='comment val'>#</span>
+  <span class='end end kw'>end</span>
+
+  <span class='comment val'># by default, return oadc</span>
+  <span class='return return kw'>return</span> <span class='oadc identifier id'>oadc</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="hex2str-class_method">
+  
+    + (<tt>Object</tt>) <strong>hex2str</strong>(hexstr) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+806
+807
+808
+809
+810</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 806</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='hex2str identifier id'>hex2str</span><span class='lparen token'>(</span><span class='hexstr identifier id'>hexstr</span><span class='rparen token'>)</span>
+  <span class='str identifier id'>str</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='hexstr identifier id'>hexstr</span><span class='dot token'>.</span><span class='scan identifier id'>scan</span><span class='lparen token'>(</span><span class='regexp val'>/../</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span> <span class='tuple identifier id'>tuple</span> <span class='bitor op'>|</span> <span class='str identifier id'>str</span><span class='opasgn op'>+=</span><span class='tuple identifier id'>tuple</span><span class='dot token'>.</span><span class='hex identifier id'>hex</span><span class='dot token'>.</span><span class='chr identifier id'>chr</span> <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='str identifier id'>str</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="hextobin-class_method">
+  
+    + (<tt>Object</tt>) <strong>hextobin</strong>(hstr) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 488</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='hextobin identifier id'>hextobin</span><span class='lparen token'>(</span><span class='hstr identifier id'>hstr</span><span class='rparen token'>)</span>
+  <span class='bstr identifier id'>bstr</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='while while kw'>while</span> <span class='i identifier id'>i</span><span class='lt op'>&lt;</span><span class='hstr identifier id'>hstr</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='hstr identifier id'>hstr</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span>
+
+    <span class='nfillbits identifier id'>nfillbits</span><span class='assign token'>=</span><span class='integer val'>8</span><span class='minus op'>-</span><span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+    <span class='if if kw'>if</span> <span class='nfillbits! fid id'>nfillbits!</span><span class='assign token'>=</span><span class='integer val'>0</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='mult op'>*</span><span class='nfillbits identifier id'>nfillbits</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+
+   <span class='bstr identifier id'>bstr</span><span class='opasgn op'>+=</span><span class='tmp identifier id'>tmp</span>
+   <span class='i identifier id'>i</span><span class='opasgn op'>+=</span><span class='integer val'>2</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='bstr identifier id'>bstr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="hextobin_reversed-class_method">
+  
+    + (<tt>Object</tt>) <strong>hextobin_reversed</strong>(hstr) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 506</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='hextobin_reversed identifier id'>hextobin_reversed</span><span class='lparen token'>(</span><span class='hstr identifier id'>hstr</span><span class='rparen token'>)</span>
+  <span class='bstr identifier id'>bstr</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='while while kw'>while</span> <span class='i identifier id'>i</span><span class='lt op'>&lt;</span><span class='hstr identifier id'>hstr</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='hstr identifier id'>hstr</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span>
+
+    <span class='nfillbits identifier id'>nfillbits</span><span class='assign token'>=</span><span class='integer val'>8</span><span class='minus op'>-</span><span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+    <span class='if if kw'>if</span> <span class='nfillbits! fid id'>nfillbits!</span><span class='assign token'>=</span><span class='integer val'>0</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='mult op'>*</span><span class='nfillbits identifier id'>nfillbits</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+
+   <span class='bstr identifier id'>bstr</span><span class='assign token'>=</span><span class='tmp identifier id'>tmp</span><span class='plus op'>+</span><span class='bstr identifier id'>bstr</span>
+   <span class='i identifier id'>i</span><span class='opasgn op'>+=</span><span class='integer val'>2</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='bstr identifier id'>bstr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="initialize_ascii2ira-class_method">
+  
+    + (<tt>Object</tt>) <strong>initialize_ascii2ira</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 39</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='initialize_ascii2ira identifier id'>initialize_ascii2ira</span>
+  
+  <span class='lparen token'>(</span><span class='string val'>'A'</span><span class='dot2 op'>..</span><span class='string val'>'Z'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+    <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='c identifier id'>c</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='c identifier id'>c</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+  <span class='lparen token'>(</span><span class='string val'>'a'</span><span class='dot2 op'>..</span><span class='string val'>'z'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+    <span class='comment val'>#@gsmtable[c]=c[0]</span>
+    <span class='comment val'>#@asciitable[c[0]]=c</span>
+    <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='c identifier id'>c</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='c identifier id'>c</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+  <span class='lparen token'>(</span><span class='string val'>'0'</span><span class='dot2 op'>..</span><span class='string val'>'9'</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+    <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='c identifier id'>c</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='c identifier id'>c</span><span class='rparen token'>)</span>
+  <span class='rbrace token'>}</span>
+
+
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x00</span><span class='comma token'>,</span><span class='string val'>&quot;@&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x01</span><span class='comma token'>,</span><span class='string val'>&quot;£&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x02</span><span class='comma token'>,</span><span class='string val'>&quot;$&quot;</span><span class='rparen token'>)</span>
+  <span class='comment val'>#add_char(0x03,&quot; &quot;)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x04</span><span class='comma token'>,</span><span class='string val'>&quot;è&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x05</span><span class='comma token'>,</span><span class='string val'>&quot;é&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x06</span><span class='comma token'>,</span><span class='string val'>&quot;ù&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x07</span><span class='comma token'>,</span><span class='string val'>&quot;ì&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x08</span><span class='comma token'>,</span><span class='string val'>&quot;ò&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x09</span><span class='comma token'>,</span><span class='string val'>&quot;Ç&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x0</span><span class='A constant id'>A</span><span class='comma token'>,</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
+  <span class='comment val'>#add_char(0x0B,&quot; &quot;)</span>
+  <span class='comment val'>#add_char(0x0C,&quot; &quot;)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x0</span><span class='D constant id'>D</span><span class='comma token'>,</span><span class='string val'>&quot;\r&quot;</span><span class='rparen token'>)</span>
+  <span class='comment val'>#add_char(0x0E,&quot;A&quot;)</span>
+  <span class='comment val'>#add_char(0x0F,&quot;a&quot;)</span>
+
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x1</span><span class='F constant id'>F</span><span class='comma token'>,</span><span class='string val'>&quot;É&quot;</span><span class='rparen token'>)</span>
+
+
+
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x20</span><span class='comma token'>,</span><span class='string val'>&quot; &quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x21</span><span class='comma token'>,</span><span class='string val'>&quot;!&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x22</span><span class='comma token'>,</span><span class='string val'>'&quot;'</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x23</span><span class='comma token'>,</span><span class='string val'>&quot;#&quot;</span><span class='rparen token'>)</span>
+  <span class='comment val'>#add_char(0x24,&quot; &quot;)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x25</span><span class='comma token'>,</span><span class='string val'>&quot;%&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x26</span><span class='comma token'>,</span><span class='string val'>&quot;&amp;&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x27</span><span class='comma token'>,</span><span class='string val'>&quot;'&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x28</span><span class='comma token'>,</span><span class='string val'>&quot;(&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x29</span><span class='comma token'>,</span><span class='string val'>&quot;)&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x2</span><span class='A constant id'>A</span><span class='comma token'>,</span><span class='string val'>&quot;*&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x2</span><span class='B constant id'>B</span><span class='comma token'>,</span><span class='string val'>&quot;+&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x2</span><span class='C constant id'>C</span><span class='comma token'>,</span><span class='string val'>&quot;,&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x2</span><span class='D constant id'>D</span><span class='comma token'>,</span><span class='string val'>&quot;-&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x2</span><span class='E constant id'>E</span><span class='comma token'>,</span><span class='string val'>&quot;.&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x2</span><span class='F constant id'>F</span><span class='comma token'>,</span><span class='string val'>&quot;/&quot;</span><span class='rparen token'>)</span>
+
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='A constant id'>A</span><span class='comma token'>,</span><span class='string val'>&quot;:&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='B constant id'>B</span><span class='comma token'>,</span><span class='string val'>&quot;;&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='C constant id'>C</span><span class='comma token'>,</span><span class='string val'>&quot;&lt;&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='D constant id'>D</span><span class='comma token'>,</span><span class='string val'>&quot;=&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='E constant id'>E</span><span class='comma token'>,</span><span class='string val'>&quot;&gt;&quot;</span><span class='rparen token'>)</span>
+  <span class='add_char identifier id'>add_char</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='F constant id'>F</span><span class='comma token'>,</span><span class='string val'>&quot;?&quot;</span><span class='rparen token'>)</span>
+
+
+
+  <span class='comment val'>#@extensiontable[&quot;€&quot;]=0x65</span>
+  <span class='comment val'>#@extensiontable_rev[0x65]=&quot;€&quot;</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x65</span><span class='comma token'>,</span><span class='string val'>&quot;€&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x14</span><span class='comma token'>,</span><span class='string val'>&quot;^&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x28</span><span class='comma token'>,</span><span class='string val'>&quot;{&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x29</span><span class='comma token'>,</span><span class='string val'>&quot;}&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x2</span><span class='F constant id'>F</span><span class='comma token'>,</span><span class='string val'>&quot;\\&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='C constant id'>C</span><span class='comma token'>,</span><span class='string val'>&quot;[&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='D constant id'>D</span><span class='comma token'>,</span><span class='string val'>&quot;~&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x3</span><span class='E constant id'>E</span><span class='comma token'>,</span><span class='string val'>&quot;]&quot;</span><span class='rparen token'>)</span>
+  <span class='add_extchar identifier id'>add_extchar</span><span class='lparen token'>(</span><span class='integer val'>0x40</span><span class='comma token'>,</span><span class='string val'>&quot;|&quot;</span><span class='rparen token'>)</span>
+
+
+
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="int2hex-class_method">
+  
+    + (<tt>Object</tt>) <strong>int2hex</strong>(i, max_nibbles = 2) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 606</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='int2hex identifier id'>int2hex</span><span class='lparen token'>(</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='max_nibbles identifier id'>max_nibbles</span><span class='assign token'>=</span><span class='integer val'>2</span><span class='rparen token'>)</span>
+  <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='i identifier id'>i</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='upcase identifier id'>upcase</span>
+  <span class='if if kw'>if</span> <span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mod op'>%</span><span class='integer val'>2</span><span class='neq op'>!=</span><span class='integer val'>0</span>
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+  <span class='end end kw'>end</span>
+
+  <span class='remaining_nibbles identifier id'>remaining_nibbles</span><span class='assign token'>=</span><span class='max_nibbles identifier id'>max_nibbles</span><span class='minus op'>-</span><span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+  <span class='if if kw'>if</span> <span class='remaining_nibbles identifier id'>remaining_nibbles</span><span class='gt op'>&gt;</span><span class='integer val'>0</span>
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='mult op'>*</span><span class='remaining_nibbles identifier id'>remaining_nibbles</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span><span class='semicolon token'>;</span>
+  <span class='end end kw'>end</span>
+
+  <span class='return return kw'>return</span> <span class='tmp identifier id'>tmp</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="make_multi_ucps-class_method">
+  
+    + (<tt>Object</tt>) <strong>make_multi_ucps</strong>(originator, recipient, message, mr = 0) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 413</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='make_multi_ucps identifier id'>make_multi_ucps</span><span class='lparen token'>(</span><span class='originator identifier id'>originator</span><span class='comma token'>,</span><span class='recipient identifier id'>recipient</span><span class='comma token'>,</span><span class='message identifier id'>message</span><span class='comma token'>,</span><span class='mr identifier id'>mr</span><span class='assign token'>=</span><span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='ucps identifier id'>ucps</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  
+  <span class='gsm7bit_encodable identifier id'>gsm7bit_encodable</span><span class='assign token'>=</span><span class='false false kw'>false</span>
+
+  <span class='if if kw'>if</span> <span class='gsm7bit_encodable identifier id'>gsm7bit_encodable</span>
+    <span class='gsmparts identifier id'>gsmparts</span><span class='assign token'>=</span> <span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='multi_ascii2ira identifier id'>multi_ascii2ira</span><span class='lparen token'>(</span><span class='message identifier id'>message</span><span class='comma token'>,</span><span class='integer val'>134</span><span class='rparen token'>)</span>
+  <span class='else else kw'>else</span>
+    <span class='gsmparts identifier id'>gsmparts</span><span class='assign token'>=</span> <span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='multi_ucs2 identifier id'>multi_ucs2</span><span class='lparen token'>(</span><span class='message identifier id'>message</span><span class='comma token'>,</span><span class='integer val'>134</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+
+
+  <span class='part_nr identifier id'>part_nr</span><span class='assign token'>=</span><span class='integer val'>1</span>
+  <span class='gsmparts identifier id'>gsmparts</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='gsmpart identifier id'>gsmpart</span><span class='bitor op'>|</span>
+    <span class='ucp identifier id'>ucp</span><span class='assign token'>=</span><span class='Ucp51Operation constant id'>Ucp51Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+    <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='basic_submit identifier id'>basic_submit</span><span class='lparen token'>(</span><span class='originator identifier id'>originator</span><span class='comma token'>,</span><span class='recipient identifier id'>recipient</span><span class='comma token'>,</span><span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+    
+    <span class='if if kw'>if</span> <span class='gsmparts identifier id'>gsmparts</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='gt op'>&gt;</span><span class='integer val'>1</span>
+      <span class='comment val'># concatenated xser</span>
+      <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='add_xser identifier id'>add_xser</span><span class='lparen token'>(</span><span class='string val'>&quot;01&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;050003&quot;</span><span class='plus op'>+</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='int2hex identifier id'>int2hex</span><span class='lparen token'>(</span><span class='mr identifier id'>mr</span><span class='rparen token'>)</span><span class='plus op'>+</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='int2hex identifier id'>int2hex</span><span class='lparen token'>(</span><span class='gsmparts identifier id'>gsmparts</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='rparen token'>)</span><span class='plus op'>+</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='int2hex identifier id'>int2hex</span><span class='lparen token'>(</span><span class='part_nr identifier id'>part_nr</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+    
+    <span class='if if kw'>if</span> <span class='gsm7bit_encodable identifier id'>gsm7bit_encodable</span>
+      <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='set_fields identifier id'>set_fields</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:mt=</span><span class='gt op'>&gt;</span><span class='integer val'>3</span><span class='comma token'>,</span> <span class='symbol val'>:msg=</span><span class='gt op'>&gt;</span><span class='gsmpart identifier id'>gsmpart</span><span class='dot token'>.</span><span class='encoded identifier id'>encoded</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+      <span class='comment val'># DCS xser</span>
+      <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='add_xser identifier id'>add_xser</span><span class='lparen token'>(</span><span class='string val'>&quot;02&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;01&quot;</span><span class='rparen token'>)</span>
+    <span class='else else kw'>else</span>
+      <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='set_fields identifier id'>set_fields</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='symbol val'>:msg=</span><span class='gt op'>&gt;</span><span class='gsmpart identifier id'>gsmpart</span><span class='dot token'>.</span><span class='encoded identifier id'>encoded</span><span class='comma token'>,</span><span class='symbol val'>:mt=</span><span class='gt op'>&gt;</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='symbol val'>:nb=</span><span class='gt op'>&gt;</span><span class='gsmpart identifier id'>gsmpart</span><span class='dot token'>.</span><span class='encoded identifier id'>encoded</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mult op'>*</span><span class='integer val'>4</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+      <span class='comment val'># DCS xser</span>
+      <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='add_xser identifier id'>add_xser</span><span class='lparen token'>(</span><span class='string val'>&quot;02&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;08&quot;</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+
+    <span class='comment val'>#ucp.trn=UCP.int2hex(initial_trn)</span>
+    <span class='comment val'>#initial_trn+=1</span>
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;part: #{ucp.to_s}&quot;</span>
+    <span class='ucps identifier id'>ucps</span><span class='lshft op'>&lt;&lt;</span><span class='ucp identifier id'>ucp</span>
+    <span class='part_nr identifier id'>part_nr</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
+  <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='ucps identifier id'>ucps</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="make_ucp_result-class_method">
+  
+    + (<tt>Object</tt>) <strong>make_ucp_result</strong>(ucp) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+usado para construir uma resposta UCP a partir dum UCP
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 755</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='make_ucp_result identifier id'>make_ucp_result</span><span class='lparen token'>(</span><span class='ucp identifier id'>ucp</span><span class='rparen token'>)</span>
+  <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;make_ucp_result(#{ucp.to_s})&quot;</span>
+
+  <span class='if if kw'>if</span> <span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+    <span class='return return kw'>return</span> <span class='nil nil kw'>nil</span>
+  <span class='end end kw'>end</span>
+
+  <span class='trn identifier id'>trn</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='trn identifier id'>trn</span>
+  <span class='comment val'>#puts &quot;#{trn}&quot;</span>
+  <span class='comment val'># length</span>
+  <span class='operation_type identifier id'>operation_type</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation_type identifier id'>operation_type</span>
+  <span class='comment val'>#puts &quot;#{operation_type}&quot;</span>
+  <span class='operation identifier id'>operation</span><span class='assign token'>=</span><span class='ucp identifier id'>ucp</span><span class='dot token'>.</span><span class='operation identifier id'>operation</span>
+  <span class='comment val'>#puts &quot;#{operation}&quot;</span>
+
+  <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span>
+
+  <span class='if if kw'>if</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;01&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp01Result constant id'>Ucp01Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;30&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp30Result constant id'>Ucp30Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;31&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp31Result constant id'>Ucp31Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;51&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp51Result constant id'>Ucp51Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;52&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp52Result constant id'>Ucp52Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;53&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp53Result constant id'>Ucp53Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;54&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp54Result constant id'>Ucp54Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;55&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp55Result constant id'>Ucp55Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;56&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp56Result constant id'>Ucp56Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;57&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp57Result constant id'>Ucp57Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;58&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp58Result constant id'>Ucp58Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;60&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp60Result constant id'>Ucp60Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;61&quot;</span><span class='rparen token'>)</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp61Result constant id'>Ucp61Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='else else kw'>else</span>
+    <span class='return return kw'>return</span> <span class='nil nil kw'>nil</span>
+  <span class='end end kw'>end</span>
+
+  <span class='ucpmsg identifier id'>ucpmsg</span><span class='dot token'>.</span><span class='trn identifier id'>trn</span><span class='assign token'>=</span><span class='trn identifier id'>trn</span>
+  <span class='return return kw'>return</span> <span class='ucpmsg identifier id'>ucpmsg</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="multi_ascii2ira-class_method">
+  
+    + (<tt>Object</tt>) <strong>multi_ascii2ira</strong>(str, max_bytes) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 330</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='multi_ascii2ira identifier id'>multi_ascii2ira</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+  <span class='msgparts identifier id'>msgparts</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='idx identifier id'>idx</span><span class='assign token'>=</span><span class='integer val'>0</span>
+
+  <span class='if if kw'>if</span> <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='jlength identifier id'>jlength</span><span class='leq op'>&lt;=</span><span class='integer val'>160</span>
+    <span class='packedmsg identifier id'>packedmsg</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='ascii2ira identifier id'>ascii2ira</span><span class='lparen token'>(</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='utf8_substr identifier id'>utf8_substr</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='idx identifier id'>idx</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='integer val'>140</span><span class='rparen token'>)</span>
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;pckd_chars: #{packedmsg.chars}; strlen: #{str.jlength}&quot;</span>
+    <span class='if if kw'>if</span> <span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span><span class='eq op'>==</span><span class='str identifier id'>str</span><span class='dot token'>.</span><span class='jlength identifier id'>jlength</span>
+      <span class='msgparts identifier id'>msgparts</span><span class='lshft op'>&lt;&lt;</span><span class='packedmsg identifier id'>packedmsg</span>
+      <span class='return return kw'>return</span> <span class='msgparts identifier id'>msgparts</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+
+  <span class='while while kw'>while</span> <span class='true true kw'>true</span>
+    <span class='comment val'>#packedmsg=UCP.ascii2ira(str[idx..-1],max_bytes)</span>
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;bla: #{UCP.utf8_substr(str,idx)}&quot;</span>
+    <span class='packedmsg identifier id'>packedmsg</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='ascii2ira identifier id'>ascii2ira</span><span class='lparen token'>(</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='utf8_substr identifier id'>utf8_substr</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='idx identifier id'>idx</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+    <span class='msgparts identifier id'>msgparts</span><span class='lshft op'>&lt;&lt;</span><span class='packedmsg identifier id'>packedmsg</span>
+    <span class='comment val'>#break</span>
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;idx: #{idx}; pckd_chars: #{packedmsg.chars}; strlen: #{str.jlength}&quot;</span>
+    
+    <span class='comment val'>#puts &quot;sL: #{str[0,idx+packedmsg.chars]} ; #{str[0,idx+packedmsg.chars].length}#&quot;</span>
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;sL: #{UCP.utf8_substr(str,idx,idx+packedmsg.chars- 1)} ; #{str[0,idx+packedmsg.chars].length}#&quot;</span>
+    
+    <span class='comment val'>#if idx+packedmsg.chars&lt;str.length</span>
+    <span class='if if kw'>if</span> <span class='idx identifier id'>idx</span><span class='plus op'>+</span><span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span><span class='lt op'>&lt;</span><span class='str identifier id'>str</span><span class='dot token'>.</span><span class='jlength identifier id'>jlength</span>
+      <span class='idx identifier id'>idx</span><span class='opasgn op'>+=</span><span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span>
+    <span class='else else kw'>else</span>
+      <span class='break break kw'>break</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='msgparts identifier id'>msgparts</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="multi_pack7bits2-class_method">
+  
+    + (<tt>Object</tt>) <strong>multi_pack7bits2</strong>(str, max_bytes) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 255</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='multi_pack7bits2 identifier id'>multi_pack7bits2</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+  <span class='msgparts identifier id'>msgparts</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='idx identifier id'>idx</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='while while kw'>while</span> <span class='true true kw'>true</span>
+    <span class='packedmsg identifier id'>packedmsg</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='pack7bits2 identifier id'>pack7bits2</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='lbrack token'>[</span><span class='idx identifier id'>idx</span><span class='dot2 op'>..</span><span class='integer val'>-1</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+    <span class='msgparts identifier id'>msgparts</span><span class='lshft op'>&lt;&lt;</span><span class='packedmsg identifier id'>packedmsg</span>
+    <span class='if if kw'>if</span> <span class='idx identifier id'>idx</span><span class='plus op'>+</span><span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span><span class='lt op'>&lt;</span><span class='str identifier id'>str</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
+      <span class='idx identifier id'>idx</span><span class='opasgn op'>+=</span><span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span>
+    <span class='else else kw'>else</span>
+      <span class='break break kw'>break</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='msgparts identifier id'>msgparts</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="multi_ucs2-class_method">
+  
+    + (<tt>Object</tt>) <strong>multi_ucs2</strong>(str, max_bytes) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 380</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='multi_ucs2 identifier id'>multi_ucs2</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+  <span class='msgparts identifier id'>msgparts</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='idx identifier id'>idx</span><span class='assign token'>=</span><span class='integer val'>0</span>
+
+  <span class='if if kw'>if</span> <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='jlength identifier id'>jlength</span><span class='leq op'>&lt;=</span><span class='integer val'>70</span>
+    <span class='packedmsg identifier id'>packedmsg</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='str2ucs2 identifier id'>str2ucs2</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='integer val'>140</span><span class='rparen token'>)</span>
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;pckd_chars: #{packedmsg.chars}; strlen: #{str.jlength}&quot;</span>
+    <span class='if if kw'>if</span> <span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span><span class='eq op'>==</span><span class='str identifier id'>str</span><span class='dot token'>.</span><span class='jlength identifier id'>jlength</span>
+      <span class='msgparts identifier id'>msgparts</span><span class='lshft op'>&lt;&lt;</span><span class='packedmsg identifier id'>packedmsg</span>
+      <span class='return return kw'>return</span> <span class='msgparts identifier id'>msgparts</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+
+  <span class='while while kw'>while</span> <span class='true true kw'>true</span>
+    
+    <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;bla: #{UCP.utf8_substr(str,idx)}&quot;</span>
+    <span class='packedmsg identifier id'>packedmsg</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='str2ucs2 identifier id'>str2ucs2</span><span class='lparen token'>(</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='utf8_substr identifier id'>utf8_substr</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='idx identifier id'>idx</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+    <span class='msgparts identifier id'>msgparts</span><span class='lshft op'>&lt;&lt;</span><span class='packedmsg identifier id'>packedmsg</span>
+    <span class='comment val'>#break</span>
+    <span class='comment val'>#puts &quot;idx: #{idx}; pckd_chars: #{packedmsg.chars}; strlen: #{str.jlength}&quot;</span>
+    <span class='comment val'>#puts &quot;sL: #{UCP.utf8_substr(str,idx,idx+packedmsg.chars- 1)} ; #{str[0,idx+packedmsg.chars].length}#&quot;</span>
+    
+    <span class='if if kw'>if</span> <span class='idx identifier id'>idx</span><span class='plus op'>+</span><span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span><span class='lt op'>&lt;</span><span class='str identifier id'>str</span><span class='dot token'>.</span><span class='jlength identifier id'>jlength</span>
+      <span class='idx identifier id'>idx</span><span class='opasgn op'>+=</span><span class='packedmsg identifier id'>packedmsg</span><span class='dot token'>.</span><span class='chars identifier id'>chars</span>
+    <span class='else else kw'>else</span>
+      <span class='break break kw'>break</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='msgparts identifier id'>msgparts</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="pack7bits-class_method">
+  
+    + (<tt>Object</tt>) <strong>pack7bits</strong>(str) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 117</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='pack7bits identifier id'>pack7bits</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='rparen token'>)</span>
+  <span class='comment val'>#UCP.initialize_ascii2ira</span>
+  
+  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='each_char identifier id'>each_char</span>  <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+
+    <span class='ext identifier id'>ext</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+    <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@gsmtable ivar id'>@gsmtable</span><span class='lbrack token'>[</span><span class='c identifier id'>c</span><span class='rbrack token'>]</span>
+
+    <span class='if if kw'>if</span> <span class='gsmchar identifier id'>gsmchar</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='if if kw'>if</span> <span class='@extensiontable ivar id'>@extensiontable</span><span class='dot token'>.</span><span class='has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='c identifier id'>c</span><span class='rparen token'>)</span>
+        <span class='ext identifier id'>ext</span><span class='assign token'>=</span><span class='string val'>&quot;0011011&quot;</span> <span class='comment val'># 1B</span>
+        <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@extensiontable ivar id'>@extensiontable</span><span class='lbrack token'>[</span><span class='c identifier id'>c</span><span class='rbrack token'>]</span>
+      <span class='else else kw'>else</span>
+        <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@gsmtable ivar id'>@gsmtable</span><span class='lbrack token'>[</span><span class='string val'>&quot; &quot;</span><span class='rbrack token'>]</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+
+    <span class='comment val'>#gsmchar=c[0]</span>
+    <span class='comment val'>#puts &quot;#{c} : #{gsmchar} xxx&quot;</span>
+    <span class='comment val'>#gsmchar=@gsmtable[&quot; &quot;] if gsmchar.nil?</span>
+    
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span> <span class='gsmchar identifier id'>gsmchar</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span>
+
+    <span class='resto identifier id'>resto</span><span class='assign token'>=</span><span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mod op'>%</span><span class='integer val'>7</span>
+    <span class='if if kw'>if</span> <span class='resto! fid id'>resto!</span><span class='assign token'>=</span><span class='integer val'>0</span>
+      <span class='nfillbits identifier id'>nfillbits</span><span class='assign token'>=</span><span class='integer val'>7</span><span class='minus op'>-</span><span class='resto identifier id'>resto</span> <span class='comment val'># 8 ou 7??</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='mult op'>*</span><span class='nfillbits identifier id'>nfillbits</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+    
+    <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='tmp identifier id'>tmp</span><span class='plus op'>+</span><span class='ext identifier id'>ext</span><span class='plus op'>+</span><span class='s identifier id'>s</span>
+
+  <span class='rbrace token'>}</span>
+
+  <span class='resto identifier id'>resto</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mod op'>%</span><span class='integer val'>8</span>
+  <span class='if if kw'>if</span> <span class='resto! fid id'>resto!</span><span class='assign token'>=</span><span class='integer val'>0</span>
+    <span class='nfillbits identifier id'>nfillbits</span><span class='assign token'>=</span><span class='integer val'>8</span><span class='minus op'>-</span><span class='resto identifier id'>resto</span>
+    <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='mult op'>*</span><span class='nfillbits identifier id'>nfillbits</span><span class='plus op'>+</span><span class='s identifier id'>s</span>
+  <span class='end end kw'>end</span>
+
+  <span class='comment val'>#puts &quot;S: #{s}&quot;</span>
+  
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='minus op'>-</span><span class='integer val'>8</span>
+  <span class='hexstr identifier id'>hexstr</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='while while kw'>while</span> <span class='i identifier id'>i</span><span class='geq op'>&gt;=</span><span class='integer val'>0</span>
+    <span class='c identifier id'>c</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span>
+
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='c identifier id'>c</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='upcase identifier id'>upcase</span>
+    <span class='if if kw'>if</span> <span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='eq op'>==</span><span class='integer val'>1</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+<span class='comment val'>#      puts tmp</span>
+    <span class='hexstr identifier id'>hexstr</span><span class='opasgn op'>+=</span><span class='tmp identifier id'>tmp</span>
+    <span class='i identifier id'>i</span><span class='opasgn op'>-=</span><span class='integer val'>8</span>
+  <span class='end end kw'>end</span>
+    
+  
+
+  <span class='return return kw'>return</span> <span class='hexstr identifier id'>hexstr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="pack7bits2-class_method">
+  
+    + (<tt>Object</tt>) <strong>pack7bits2</strong>(str, max_bytes) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 179</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='pack7bits2 identifier id'>pack7bits2</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+
+  <span class='tainted identifier id'>tainted</span><span class='assign token'>=</span><span class='false false kw'>false</span>
+  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='idx identifier id'>idx</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='each_char identifier id'>each_char</span>  <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+
+    <span class='ext identifier id'>ext</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+    <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@gsmtable ivar id'>@gsmtable</span><span class='lbrack token'>[</span><span class='c identifier id'>c</span><span class='rbrack token'>]</span>
+
+    <span class='if if kw'>if</span> <span class='gsmchar identifier id'>gsmchar</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+      <span class='if if kw'>if</span> <span class='@extensiontable ivar id'>@extensiontable</span><span class='dot token'>.</span><span class='has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='c identifier id'>c</span><span class='rparen token'>)</span>
+        <span class='ext identifier id'>ext</span><span class='assign token'>=</span><span class='string val'>&quot;0011011&quot;</span> <span class='comment val'># 1B</span>
+        <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@extensiontable ivar id'>@extensiontable</span><span class='lbrack token'>[</span><span class='c identifier id'>c</span><span class='rbrack token'>]</span>
+      <span class='else else kw'>else</span>
+        <span class='gsmchar identifier id'>gsmchar</span><span class='assign token'>=</span><span class='@gsmtable ivar id'>@gsmtable</span><span class='lbrack token'>[</span><span class='string val'>&quot; &quot;</span><span class='rbrack token'>]</span>
+        <span class='tainted identifier id'>tainted</span><span class='assign token'>=</span><span class='true true kw'>true</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+
+    <span class='comment val'>#gsmchar=c[0]</span>
+    <span class='comment val'>#puts &quot;#{c} : #{gsmchar} xxx&quot;</span>
+    <span class='comment val'>#gsmchar=@gsmtable[&quot; &quot;] if gsmchar.nil?</span>
+
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span> <span class='gsmchar identifier id'>gsmchar</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span>
+
+    <span class='resto identifier id'>resto</span><span class='assign token'>=</span><span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mod op'>%</span><span class='integer val'>7</span>
+    <span class='if if kw'>if</span> <span class='resto! fid id'>resto!</span><span class='assign token'>=</span><span class='integer val'>0</span>
+      <span class='nfillbits identifier id'>nfillbits</span><span class='assign token'>=</span><span class='integer val'>7</span><span class='minus op'>-</span><span class='resto identifier id'>resto</span> <span class='comment val'># 8 ou 7??</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='mult op'>*</span><span class='nfillbits identifier id'>nfillbits</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+
+    <span class='comment val'># if adding this character exceeds the max allowed nr of bytes, break</span>
+    <span class='if if kw'>if</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='tmp identifier id'>tmp</span><span class='plus op'>+</span><span class='ext identifier id'>ext</span><span class='plus op'>+</span><span class='s identifier id'>s</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mult op'>*</span><span class='float val'>1.0</span><span class='div op'>/</span><span class='integer val'>8</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='ceil identifier id'>ceil</span><span class='gt op'>&gt;</span><span class='max_bytes identifier id'>max_bytes</span>
+      <span class='break break kw'>break</span>
+    <span class='end end kw'>end</span>
+
+    <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='tmp identifier id'>tmp</span><span class='plus op'>+</span><span class='ext identifier id'>ext</span><span class='plus op'>+</span><span class='s identifier id'>s</span>
+
+    <span class='comment val'># if reached the max allowed nr of bytes, break</span>
+    <span class='if if kw'>if</span> <span class='lparen token'>(</span><span class='s identifier id'>s</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mult op'>*</span><span class='float val'>1.0</span><span class='div op'>/</span><span class='integer val'>8</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='ceil identifier id'>ceil</span><span class='eq op'>==</span><span class='max_bytes identifier id'>max_bytes</span>
+      <span class='idx identifier id'>idx</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
+      <span class='break break kw'>break</span>
+    <span class='end end kw'>end</span>
+    
+    <span class='idx identifier id'>idx</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
+  <span class='rbrace token'>}</span>
+
+
+  <span class='required_septets identifier id'>required_septets</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='div op'>/</span><span class='integer val'>7</span>
+  <span class='resto identifier id'>resto</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mod op'>%</span><span class='integer val'>8</span>
+  <span class='if if kw'>if</span> <span class='resto! fid id'>resto!</span><span class='assign token'>=</span><span class='integer val'>0</span>
+    <span class='nfillbits identifier id'>nfillbits</span><span class='assign token'>=</span><span class='integer val'>8</span><span class='minus op'>-</span><span class='resto identifier id'>resto</span>
+    <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='mult op'>*</span><span class='nfillbits identifier id'>nfillbits</span><span class='plus op'>+</span><span class='s identifier id'>s</span>
+  <span class='end end kw'>end</span>
+
+  <span class='comment val'>#puts &quot;S: #{s}&quot;</span>
+
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='minus op'>-</span><span class='integer val'>8</span>
+  <span class='hexstr identifier id'>hexstr</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='while while kw'>while</span> <span class='i identifier id'>i</span><span class='geq op'>&gt;=</span><span class='integer val'>0</span>
+    <span class='c identifier id'>c</span><span class='assign token'>=</span><span class='s identifier id'>s</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span>
+
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='c identifier id'>c</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='upcase identifier id'>upcase</span>
+    <span class='if if kw'>if</span> <span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='eq op'>==</span><span class='integer val'>1</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+<span class='comment val'>#      puts tmp</span>
+    <span class='hexstr identifier id'>hexstr</span><span class='opasgn op'>+=</span><span class='tmp identifier id'>tmp</span>
+    <span class='i identifier id'>i</span><span class='opasgn op'>-=</span><span class='integer val'>8</span>
+  <span class='end end kw'>end</span>
+
+
+  <span class='return return kw'>return</span> <span class='GsmPackedMsg constant id'>GsmPackedMsg</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='hexstr identifier id'>hexstr</span><span class='comma token'>,</span><span class='str identifier id'>str</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='idx identifier id'>idx</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='idx identifier id'>idx</span><span class='comma token'>,</span><span class='required_septets identifier id'>required_septets</span><span class='comma token'>,</span><span class='tainted identifier id'>tainted</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="packoadc-class_method">
+  
+    + (<tt>Object</tt>) <strong>packoadc</strong>(oa) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 473</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='packoadc identifier id'>packoadc</span><span class='lparen token'>(</span><span class='oa identifier id'>oa</span><span class='rparen token'>)</span>
+  <span class='packedoa identifier id'>packedoa</span><span class='assign token'>=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='pack7bits identifier id'>pack7bits</span><span class='lparen token'>(</span><span class='oa identifier id'>oa</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># esta conta nao esta correcta... por causa das extensoes...</span>
+  <span class='comment val'>#useful_nibbles=packedoa.length</span>
+  <span class='useful_nibbles identifier id'>useful_nibbles</span><span class='assign token'>=</span><span class='lparen token'>(</span><span class='oa identifier id'>oa</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='mult op'>*</span><span class='float val'>7.0</span><span class='div op'>/</span><span class='integer val'>4</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='ceil identifier id'>ceil</span>
+
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='useful_nibbles identifier id'>useful_nibbles</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='upcase identifier id'>upcase</span>
+    <span class='if if kw'>if</span> <span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='eq op'>==</span><span class='integer val'>1</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+
+  <span class='return return kw'>return</span> <span class='tmp identifier id'>tmp</span><span class='plus op'>+</span><span class='packedoa identifier id'>packedoa</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="packucs2-class_method">
+  
+    + (<tt>Object</tt>) <strong>packucs2</strong>(str) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 456</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='packucs2 identifier id'>packucs2</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='rparen token'>)</span>
+  <span class='hexstr identifier id'>hexstr</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='s identifier id'>s</span><span class='assign token'>=</span> <span class='Iconv constant id'>Iconv</span><span class='dot token'>.</span><span class='iconv identifier id'>iconv</span><span class='lparen token'>(</span><span class='string val'>&quot;ucs-2be&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;utf-8&quot;</span><span class='comma token'>,</span> <span class='str identifier id'>str</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span>
+  <span class='s identifier id'>s</span><span class='dot token'>.</span><span class='each_char identifier id'>each_char</span><span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+
+    <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='c identifier id'>c</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='lparen token'>(</span><span class='integer val'>16</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='upcase identifier id'>upcase</span>
+    <span class='if if kw'>if</span> <span class='tmp identifier id'>tmp</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='eq op'>==</span><span class='integer val'>1</span>
+      <span class='tmp identifier id'>tmp</span><span class='assign token'>=</span><span class='string val'>&quot;0&quot;</span><span class='plus op'>+</span><span class='tmp identifier id'>tmp</span>
+    <span class='end end kw'>end</span>
+
+    <span class='hexstr identifier id'>hexstr</span><span class='opasgn op'>+=</span><span class='tmp identifier id'>tmp</span>
+
+  <span class='rbrace token'>}</span>
+  <span class='comment val'>#puts s</span>
+  <span class='return return kw'>return</span> <span class='hexstr identifier id'>hexstr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="parse_str-class_method">
+  
+    + (<tt>Object</tt>) <strong>parse_str</strong>(ustr) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+usado para construir um UCP duma string
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 623</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='parse_str identifier id'>parse_str</span><span class='lparen token'>(</span><span class='ustr identifier id'>ustr</span><span class='rparen token'>)</span>
+  <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;parse_str(#{ustr})&quot;</span>
+
+  <span class='if if kw'>if</span> <span class='ustr identifier id'>ustr</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+    <span class='return return kw'>return</span> <span class='nil nil kw'>nil</span>
+  <span class='end end kw'>end</span>
+
+  <span class='arr identifier id'>arr</span><span class='assign token'>=</span><span class='ustr identifier id'>ustr</span><span class='lbrack token'>[</span><span class='lparen token'>(</span><span class='ustr identifier id'>ustr</span><span class='dot token'>.</span><span class='index identifier id'>index</span><span class='lparen token'>(</span><span class='float val'>2</span><span class='dot token'>.</span><span class='chr identifier id'>chr</span><span class='rparen token'>)</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='rparen token'>)</span><span class='dot2 op'>..</span><span class='integer val'>-2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>&quot;/&quot;</span><span class='rparen token'>)</span>
+  <span class='trn identifier id'>trn</span><span class='assign token'>=</span><span class='arr identifier id'>arr</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+  <span class='comment val'>#puts &quot;#{trn}&quot;</span>
+  <span class='comment val'># length</span>
+  <span class='operation_type identifier id'>operation_type</span><span class='assign token'>=</span><span class='arr identifier id'>arr</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+  <span class='comment val'>#puts &quot;#{operation_type}&quot;</span>
+  <span class='operation identifier id'>operation</span><span class='assign token'>=</span><span class='arr identifier id'>arr</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='rbrack token'>]</span>
+  <span class='comment val'>#puts &quot;#{operation}&quot;</span>
+
+  <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span>
+
+  <span class='if if kw'>if</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;01&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='string val'>&quot;a fazer parsing a uma operacao ucp01&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp01Operation constant id'>Ucp01Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='string val'>&quot;a fazer parsing a um resultado ucp01&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp01Result constant id'>Ucp01Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>        
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;30&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='string val'>&quot;a fazer parsing a uma operacao ucp30&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp30Operation constant id'>Ucp30Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp30&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp30Result constant id'>Ucp30Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;31&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp31&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp31Operation constant id'>Ucp31Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp31&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp31Result constant id'>Ucp31Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;51&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp51&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp51Operation constant id'>Ucp51Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp51&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp51Result constant id'>Ucp51Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;52&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp52&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp52Operation constant id'>Ucp52Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp52&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp52Result constant id'>Ucp52Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;53&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp53&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp53Operation constant id'>Ucp53Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp53&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp53Result constant id'>Ucp53Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;54&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp54&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp54Operation constant id'>Ucp54Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp54&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp54Result constant id'>Ucp54Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;55&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp55&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp55Operation constant id'>Ucp55Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp55&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp55Result constant id'>Ucp55Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;56&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp56&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp56Operation constant id'>Ucp56Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp56&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp56Result constant id'>Ucp56Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;57&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp57&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp57Operation constant id'>Ucp57Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp57&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp57Result constant id'>Ucp57Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;58&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a uma operacao ucp58&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp58Operation constant id'>Ucp58Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='comment val'>#puts &quot;a fazer parsing a um resultado ucp58&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp58Result constant id'>Ucp58Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;60&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='string val'>&quot;a fazer parsing a uma operacao ucp60&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp60Operation constant id'>Ucp60Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='string val'>&quot;a fazer parsing a um resultado ucp60&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp60Result constant id'>Ucp60Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='elsif elsif kw'>elsif</span> <span class='operation identifier id'>operation</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;61&quot;</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;O&quot;</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='string val'>&quot;a fazer parsing a uma operacao ucp61&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp61Operation constant id'>Ucp61Operation</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='elsif elsif kw'>elsif</span> <span class='operation_type identifier id'>operation_type</span><span class='dot token'>.</span><span class='eql? fid id'>eql?</span><span class='lparen token'>(</span><span class='string val'>&quot;R&quot;</span><span class='rparen token'>)</span>
+      <span class='puts identifier id'>puts</span> <span class='string val'>&quot;a fazer parsing a um resultado ucp61&quot;</span>
+      <span class='ucpmsg identifier id'>ucpmsg</span><span class='assign token'>=</span><span class='Ucp61Result constant id'>Ucp61Result</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='arr identifier id'>arr</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+
+  <span class='comment val'>#ucpmsg.trn=trn</span>
+  <span class='return return kw'>return</span> <span class='ucpmsg identifier id'>ucpmsg</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="str2ucs2-class_method">
+  
+    + (<tt>Object</tt>) <strong>str2ucs2</strong>(str, max_bytes = nil) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 365</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='str2ucs2 identifier id'>str2ucs2</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='max_bytes identifier id'>max_bytes</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='hexstr identifier id'>hexstr</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='str identifier id'>str</span><span class='assign token'>=</span><span class='Iconv constant id'>Iconv</span><span class='dot token'>.</span><span class='iconv identifier id'>iconv</span><span class='lparen token'>(</span><span class='string val'>&quot;utf-16be&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;utf-8&quot;</span><span class='comma token'>,</span> <span class='str identifier id'>str</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span>
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='each_byte identifier id'>each_byte</span><span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+    <span class='hexstr identifier id'>hexstr</span><span class='opasgn op'>+=</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='int2hex identifier id'>int2hex</span><span class='lparen token'>(</span><span class='c identifier id'>c</span><span class='rparen token'>)</span>
+    <span class='i identifier id'>i</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
+    <span class='if if kw'>if</span> <span class='lparen token'>(</span><span class='notop op'>!</span><span class='max_bytes identifier id'>max_bytes</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='lparen token'>(</span><span class='i identifier id'>i</span> <span class='eq op'>==</span> <span class='max_bytes identifier id'>max_bytes</span><span class='rparen token'>)</span>
+      <span class='break break kw'>break</span>
+    <span class='end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+
+  <span class='return return kw'>return</span> <span class='Ucs2PackedMsg constant id'>Ucs2PackedMsg</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='hexstr identifier id'>hexstr</span><span class='comma token'>,</span><span class='UCP constant id'>UCP</span><span class='dot token'>.</span><span class='utf8_substr identifier id'>utf8_substr</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='i identifier id'>i</span><span class='minus op'>-</span><span class='integer val'>1</span><span class='rparen token'>)</span><span class='comma token'>,</span><span class='i identifier id'>i</span><span class='div op'>/</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='i identifier id'>i</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="utf8_substr-class_method">
+  
+    + (<tt>Object</tt>) <strong>utf8_substr</strong>(str, idxs, idxe = nil) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/ucp/util/ucp.rb', line 319</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='utf8_substr identifier id'>utf8_substr</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='comma token'>,</span><span class='idxs identifier id'>idxs</span><span class='comma token'>,</span><span class='idxe identifier id'>idxe</span><span class='assign token'>=</span><span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;&quot;</span>
+  <span class='i identifier id'>i</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='idxe identifier id'>idxe</span><span class='assign token'>=</span><span class='str identifier id'>str</span><span class='dot token'>.</span><span class='jlength identifier id'>jlength</span><span class='minus op'>-</span><span class='integer val'>1</span> <span class='if if_mod kw'>if</span> <span class='idxe identifier id'>idxe</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='each_char identifier id'>each_char</span><span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='bitor op'>|</span>
+    <span class='s identifier id'>s</span><span class='opasgn op'>+=</span><span class='c identifier id'>c</span> <span class='if if_mod kw'>if</span> <span class='i identifier id'>i</span><span class='geq op'>&gt;=</span><span class='idxs identifier id'>idxs</span> <span class='and and kw'>and</span> <span class='i identifier id'>i</span><span class='leq op'>&lt;=</span><span class='idxe identifier id'>idxe</span>
+    <span class='i identifier id'>i</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
+  <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='s identifier id'>s</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Jan  9 23:49:17 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

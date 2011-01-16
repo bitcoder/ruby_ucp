@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>decode_ucp_msg (Ucp::Util::UCP)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/util/ucp.rb, line 820</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">decode_ucp_msg</span>(<span class="ruby-identifier">ucp</span>)
+    <span class="ruby-identifier">text</span>=<span class="ruby-keyword kw">nil</span>
+    <span class="ruby-identifier">dcs</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">dcs</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-value">16</span>)
+
+    <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">dcs</span> <span class="ruby-operator">&amp;</span> <span class="ruby-value">0x0</span><span class="ruby-constant">F</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x01</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">dcs</span> <span class="ruby-operator">&amp;</span> <span class="ruby-value">0x0</span><span class="ruby-constant">F</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x00</span>)
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;30&quot;</span>)
+        <span class="ruby-identifier">text</span>=<span class="ruby-constant">UCP</span>.<span class="ruby-identifier">decode_ira</span>(<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:amsg</span>))
+      <span class="ruby-keyword kw">else</span>
+
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;51&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;52&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;53&quot;</span>)
+          <span class="ruby-identifier">mt</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:msg</span>)
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mt</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;2&quot;</span>)
+            <span class="ruby-comment cmt"># numeric message.. return it as it is</span>
+            <span class="ruby-identifier">text</span>=<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:msg</span>)
+          <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">mt</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;3&quot;</span>)
+            <span class="ruby-identifier">text</span>=<span class="ruby-constant">UCP</span>.<span class="ruby-identifier">decode_ira</span>(<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:msg</span>))
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-comment cmt"># unexpected &quot;mt&quot; value. return nil explicitely</span>
+            <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">operation</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-value str">&quot;01&quot;</span>)
+          <span class="ruby-identifier">text</span>=<span class="ruby-constant">UCP</span>.<span class="ruby-identifier">decode_ira</span>(<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:msg</span>))
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-comment cmt"># unexpected operation. return nil explicitely</span>
+          <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+        <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">elsif</span> (<span class="ruby-identifier">dcs</span> <span class="ruby-operator">&amp;</span> <span class="ruby-value">0x0</span><span class="ruby-constant">F</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x08</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">dcs</span> <span class="ruby-operator">&amp;</span> <span class="ruby-value">0x0</span><span class="ruby-constant">F</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x09</span>)
+      <span class="ruby-identifier">str</span>=<span class="ruby-constant">UCP</span>.<span class="ruby-identifier">hex2str</span>(<span class="ruby-identifier">ucp</span>.<span class="ruby-identifier">get_field</span>(<span class="ruby-identifier">:msg</span>))
+      <span class="ruby-identifier">text</span>=<span class="ruby-constant">Iconv</span>.<span class="ruby-identifier">iconv</span>(<span class="ruby-value str">&quot;utf-8&quot;</span>,<span class="ruby-value str">&quot;utf-16be&quot;</span>,<span class="ruby-identifier">str</span>).<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-comment cmt"># cant decode text; unsupported DCS</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">text</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

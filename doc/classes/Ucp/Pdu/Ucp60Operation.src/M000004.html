@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>basic_auth (Ucp::Pdu::Ucp60Operation)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ucp/pdu/ucp60_operation.rb, line 38</span>
+ <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">basic_auth</span>(<span class="ruby-identifier">originator</span>,<span class="ruby-identifier">password</span>,<span class="ruby-identifier">ucpfields</span>={})
+    <span class="ruby-comment cmt">#super()</span>
+    <span class="ruby-comment cmt">#@operation_type=&quot;O&quot;</span>
+    
+    <span class="ruby-ivar">@h</span>={<span class="ruby-identifier">:oadc=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">originator</span>, <span class="ruby-identifier">:pwd=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">UCP</span>.<span class="ruby-identifier">ascii2ira</span>(<span class="ruby-identifier">password</span>), <span class="ruby-identifier">:vers=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;0100&quot;</span>, <span class="ruby-identifier">:styp=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;1&quot;</span>, <span class="ruby-identifier">:oton=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;6&quot;</span>,<span class="ruby-identifier">:onpi=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;5&quot;</span>}
+    <span class="ruby-ivar">@h</span>=<span class="ruby-ivar">@h</span>.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">ucpfields</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
