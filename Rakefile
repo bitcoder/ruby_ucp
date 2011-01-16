@@ -89,7 +89,7 @@ end
 
 
 Rake::RDocTask.new do |rdoc|
-  files =['README', 'LICENSE', 'lib/**/*.rb']
+  files =['README', 'LICENSE', 'CHANGELOG', 'lib/**/*.rb']
   rdoc.rdoc_files.add(files)
   rdoc.main = "README" # page to start on
   rdoc.title = "ruby_ucp Docs"
