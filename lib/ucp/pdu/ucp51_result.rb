@@ -45,7 +45,7 @@ class Ucp::Pdu::Ucp51Result < Ucp::Pdu::UCP5x
 
 
   def ack(mvp="",sm="")
-    @fields=[:ack,:sm]
+    @fields=[:ack,:mvp,:sm]
     @h[:ack]="A"
     @h[:mvp]=mvp
     @h[:sm]=sm
