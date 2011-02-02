@@ -18,11 +18,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 =end
 
 
-class Ucp::Pdu::UCP61 < Ucp::Pdu::UCPMessage
+class Ucp::Pdu::UCP60 < Ucp::Pdu::UCPMessage
 
   def initialize()
     super()
-    @operation="61"
+    @operation="60"
   end
 
   
