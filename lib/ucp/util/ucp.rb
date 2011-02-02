@@ -828,7 +828,7 @@ class Ucp::Util::UCP
       else
 
         if ucp.operation.eql?("51") || ucp.operation.eql?("52") || ucp.operation.eql?("53")
-          mt=ucp.get_field(:msg)
+          mt=ucp.get_field(:mt)
           if mt.eql?("2")
             # numeric message.. return it as it is
             text=ucp.get_field(:msg)
