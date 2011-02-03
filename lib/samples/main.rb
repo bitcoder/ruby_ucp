@@ -35,6 +35,12 @@ def handle_me(smsreq)
   puts "handle_me [#{smsreq.source_ip}:#{smsreq.source_port}] (#{smsreq.originator},#{smsreq.recipient})  (#{smsreq.part_nr}/#{smsreq.total_parts}): #{smsreq.text}\n"
 end
 
+def auth_handler(authreq)
+  puts "auth_handler [#{authreq.source_ip}:#{authreq.source_port}] (#{authreq.account},#{authreq.password})\n"
+  return true
+end
+
+
 #ucp=UCP.parse_str("*00/00113/O/51/961234567/1234/////////////////4/120/B49AED86CBC162B219AD66BBE17230//////////0106050003450202///90#")
 #puts "UCP: #{ucp.to_s}"
 #exit
@@ -89,7 +95,7 @@ puts ucp.to_s
 
 port=12009
 server=UcpServer.new(method(:handle_me),port)
-
+server.set_authentication_handler(method(:auth_handler))
 
 cliente=UcpClient.new("localhost",port,{:login=>8006,:password=>"timor"})
 #sent=cliente.send_message(1234,961234567,"1234567890"*17+"ola custa 1€ sabias?")
