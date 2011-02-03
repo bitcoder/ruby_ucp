@@ -19,16 +19,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 require 'socket'
 
-class ClientQuitError < RuntimeError; end
-
-#class UcpServer
-
 include Ucp::Pdu
 include Ucp::Util
 
 class Ucp::Util::UcpServer
 
   @server=nil
+  @auth_handler=nil
 
   def initialize(handler,port,host=nil)
 
@@ -69,7 +66,6 @@ class Ucp::Util::UcpServer
 
           begin
             while line = s.gets(3.chr) # read a line at a time
-              raise ClientQuitError if line =~ /^die\r?$/
 
               #puts "#{addr} [#{Time.now}]: #{line}"
 
@@ -83,23 +79,37 @@ class Ucp::Util::UcpServer
                 smsreq=SmsRequest.new(UCP.decode_ucp_oadc(ucp),ucp.get_field(:adc),text,account,addr,port)
                 smsreq.set_parts_info(ucp.message_ref, ucp.part_nr, ucp.total_parts)
                 handler.call(smsreq)
+              elsif ucp.operation.eql?("60")
+                if !@auth_handler.nil?
+                  authreq=AuthRequest.new(ucp.get_field(:oadc),UCP.decode_ira(ucp.get_field(:pwd)),addr,port)
+                  auth_result=@auth_handler.call(authreq)
+                  if !auth_result
+                    reply_ucp=UCP.make_ucp_result(ucp)
+                    reply_ucp.nack("01","authentication failed")
+                    #puts "reply #{reply_ucp.to_s}"
+                    s.print reply_ucp.to_s
+                    puts "Ssent: #{reply_ucp.to_s}\n"
+                    puts "*** #{name}:#{port} forced disconnected"
+                    s.close # close socket
+                    break
+                  else
+                    account=authreq.account
+                  end
+                end
               end
 
               reply_ucp=UCP.make_ucp_result(ucp)
-              #puts "bbbbbbbbbbbbb1"
               reply_ucp.ack("ok")
-              #puts "bbbbbbbbbbbbb2"
+
               #puts "reply #{reply_ucp.to_s}"
               s.print reply_ucp.to_s
               puts "Ssent: #{reply_ucp.to_s}\n"
             end
-          rescue ClientQuitError
-            puts "*** #{name}:#{port} disconnected"
           ensure
+            puts "*** #{name}:#{port} disconnected/closed"
             s.close # close socket on error
           end
 
-          puts "*** done with #{name}:#{port}"
           # end Thread
         end
 
@@ -117,6 +127,8 @@ class Ucp::Util::UcpServer
     @server.close
   end
 
-
+  def set_authentication_handler(handler)
+    @auth_handler=handler
+  end
 
 end
