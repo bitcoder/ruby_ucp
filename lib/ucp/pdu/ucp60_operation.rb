@@ -51,7 +51,7 @@ class Ucp::Pdu::Ucp60Operation < Ucp::Pdu::UCP60
     #super()
     #@operation_type="O"
     
-    @h={:oadc=>originator, :pwd=>UCP.ascii2ira(password), :vers=>"0100", :styp=>"1", :oton=>"6",:onpi=>"5"}
+    @h={:oadc=>originator, :pwd=>UCP.ascii2ira(password).encoded, :vers=>"0100", :styp=>"1", :oton=>"6",:onpi=>"5"}
     @h=@h.merge ucpfields
   end
 
