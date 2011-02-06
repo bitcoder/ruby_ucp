@@ -1,6 +1,12 @@
 ============ RELEASED ==============
 
-= 0.1.0
+= 0.2.0 (2011-02-06)
+* miscelaneous cleanup
+* basic documentation of methods in Ucp::Util::UCP
+* fixed issues #1, #2, #3, #4, #6, #7
+* added authentication handler/callback in Ucp::Util::UcpServer
+
+= 0.1.0 (2011-01-16)
 * first public version of "ruby_ucp" gem
 * multiple PDUs support (operations 30,31,51,52,53,54,55,56,57,58,60,61)
 * added a class to implement an UCP server (e.g. for simulating a SMSC)
@@ -36,7 +42,3 @@
 
 = 0.3.0
 * methods documentation
-
-= 0.2.0
-* miscelaneous cleanup
-
