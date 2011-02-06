@@ -122,14 +122,8 @@ puts ucp.to_s
 
 
 puts UCP.pack7bits("€")
-#puts UCP.packucs2("ola")
 puts UCP.decode7bitgsm(UCP.pack7bits("1234567890"*17))
-gsmparts= UCP.pack7bits2("1234567890"*17,134)
-puts "septets: #{gsmparts.required_septets} ;  unenc: #{gsmparts.unencoded}"
-gsmparts= UCP.multi_pack7bits2("1234567890"*17,134)
-gsmparts.each { |gsmpart|
-  puts "part: #{gsmpart.unencoded}"
-}
+
 
 UCP.make_multi_ucps(1235,961234568,"1234567890"*17)
 
