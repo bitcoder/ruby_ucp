@@ -32,18 +32,21 @@ class Ucp::Util::UCP
   @extensiontable={}
   @extensiontable_rev={}
 
+  # add a character mapping to the 7bit GSM default alphabet
   :private
   def self.add_char(value,char)
     @gsmtable[char]=value
     @asciitable[value]=char
   end
 
+  # add an extesion character to the 7bit GSM default alphabet
   :private
   def self.add_extchar(value,char)
     @extensiontable[char]=value
     @extensiontable_rev[value]=char
   end
 
+  # build/initialize the GSM default alphabet mapping tables
   def self.initialize_ascii2ira
     
     ('A'..'Z').each { |c|
@@ -104,10 +107,6 @@ class Ucp::Util::UCP
     add_char(0x3E,">")
     add_char(0x3F,"?")
 
-
-
-    #@extensiontable["€"]=0x65
-    #@extensiontable_rev[0x65]="€"
     add_extchar(0x65,"€")
     add_extchar(0x14,"^")
     add_extchar(0x28,"{")
@@ -117,13 +116,11 @@ class Ucp::Util::UCP
     add_extchar(0x3D,"~")
     add_extchar(0x3E,"]")
     add_extchar(0x40,"|")
-
-
-
   end
 
+  # pack a given text string in 7bit GSM default alphabet
+  # return it as an hexadecimal string
   def self.pack7bits(str)
-    #UCP.initialize_ascii2ira
     
     s=""
     str.each_char  { |c|
@@ -177,105 +174,9 @@ class Ucp::Util::UCP
       hexstr+=tmp
       i-=8
     end
-
-    
 
     return hexstr
   end
-
-
-  def self.pack7bits2(str,max_bytes)
-
-    tainted=false
-    s=""
-    idx=0
-    str.each_char  { |c|
-
-      ext=""
-      gsmchar=@gsmtable[c]
-
-      if gsmchar.nil?
-        if @extensiontable.has_key?(c)
-          ext="0011011" # 1B
-          gsmchar=@extensiontable[c]
-        else
-          gsmchar=@gsmtable[" "]
-          tainted=true
-        end
-      end
-
-      #gsmchar=c[0]
-      #puts "#{c} : #{gsmchar} xxx"
-      #gsmchar=@gsmtable[" "] if gsmchar.nil?
-
-      tmp= gsmchar.to_s(2)
-
-      remainder=tmp.length%7
-      if remainder!=0
-        nfillbits=7-remainder
-        tmp="0"*nfillbits+tmp
-      end
-
-      # if adding this character exceeds the max allowed nr of bytes, break
-      if ((tmp+ext+s).length*1.0/8).ceil>max_bytes
-        break
-      end
-
-      s=tmp+ext+s
-
-      # if reached the max allowed nr of bytes, break
-      if (s.length*1.0/8).ceil==max_bytes
-        idx+=1
-        break
-      end
-      
-      idx+=1
-    }
-
-
-    required_septets=s.length/7
-    remainder=s.length%8
-    if remainder!=0
-      nfillbits=8-remainder
-      s="0"*nfillbits+s
-    end
-
-    #puts "S: #{s}"
-
-    i=s.length-8
-    hexstr=""
-    while i>=0
-      c=s[i,8]
-
-      tmp=c.to_i(2).to_s(16).upcase
-      if tmp.length==1
-        tmp="0"+tmp
-      end
-      #      puts tmp
-      hexstr+=tmp
-      i-=8
-    end
-
-
-    return GsmPackedMsg.new(hexstr,str[0,idx],idx,required_septets,tainted)
-  end
-
-  # @deprecated remove because unecessary
-  def self.multi_pack7bits(str,max_bytes)
-    msgparts=[]
-    idx=0
-    while true
-      packedmsg=UCP.pack7bits2(str[idx..-1],max_bytes)
-      msgparts<<packedmsg
-      if idx+packedmsg.chars<str.length
-        idx+=packedmsg.chars
-      else
-        break
-      end
-    end
-    return msgparts
-  end
-
 
   # convert standard string to IRA encoded hexstring
   def self.ascii2ira(str,max_bytes=nil)
@@ -323,7 +224,8 @@ class Ucp::Util::UCP
     return GsmPackedMsg.new(s,UCP.utf8_substr(str,0,idx-1),idx,required_septets,tainted)
   end
 
-
+  # a dirty UTF-8 substring implementation
+  # returns a substring of an UTF-8 encoded string, given the string, start end end characters
   def self.utf8_substr(str,idxs,idxe=nil)
     s=""
     i=0
@@ -335,6 +237,8 @@ class Ucp::Util::UCP
     return s
   end
 
+  # given a text, automatically split it if necessary and encode each part text in (IRA5) GSM default alphabet
+  # returns an array of IRA5 hexadecimal strings, one per part
   def self.multi_ascii2ira(str,max_bytes)
     msgparts=[]
     idx=0
@@ -368,7 +272,8 @@ class Ucp::Util::UCP
     return msgparts
   end
 
-
+  # convert a given UTF-8 string to "UCS-2"
+  # returns an object representing the UCS-2 packed message
   def self.str2ucs2(str,max_bytes=nil)
     hexstr=""
     str=Iconv.iconv("utf-16be", "utf-8", str).first
@@ -384,6 +289,8 @@ class Ucp::Util::UCP
     return Ucs2PackedMsg.new(hexstr,UCP.utf8_substr(str,0,i-1),i/2,i)
   end
 
+  # given a text, automatically split it if necessary and encode each part text in UCS-2
+  # returns an array of UCS-2 hexadecimal strings, one per part
   def self.multi_ucs2(str,max_bytes)
     msgparts=[]
     idx=0
@@ -415,8 +322,9 @@ class Ucp::Util::UCP
     return msgparts
   end
 
-
-
+  # automatically build the necessary UCP pdu's in order to encode a given submit message
+  # returns an array of UCP51 pdu's
+  # (for now, it does NOT select automatically the SM encoding; it forces/assumes 7bit GSM)
   def self.make_multi_ucps(originator,recipient,message,mr=0)
     ucps=[]
 
@@ -459,25 +367,8 @@ class Ucp::Util::UCP
     return ucps
   end
 
-
-
-  def self.packucs2(str)
-    hexstr=""
-    s= Iconv.iconv("ucs-2be", "utf-8", str).first
-    s.each_char{ |c|
-
-      tmp=c[0].to_s(16).upcase
-      if tmp.length==1
-        tmp="0"+tmp
-      end
-
-      hexstr+=tmp
-
-    }
-    #puts s
-    return hexstr
-  end
-
+  # return an encoded originator alphanumeric address
+  # to be used in the "oadc" field, if alphanumeric
   def self.packoadc(oa)
     packedoa=UCP.pack7bits(oa)
 
@@ -493,6 +384,7 @@ class Ucp::Util::UCP
     return tmp+packedoa
   end
 
+  # convert an hexadecimal string to a binary string
   def self.hextobin(hstr)
     bstr=""
     i=0
@@ -528,12 +420,8 @@ class Ucp::Util::UCP
     return bstr
   end
 
-
-  def self.decode7bitgsm(str)
-    
-    # retirar isto!!
-    #initialize_ascii2ira
-    
+  # decode a 7bit packed GSM default alphabet hexstring
+  def self.decode7bitgsm(str)        
     unencoded=""
     #puts "#{str}"
     bstr=UCP.hextobin_reversed(str)
@@ -582,7 +470,7 @@ class Ucp::Util::UCP
   end
 
 
-
+  # decode an IRA5 hexadecimal represented string to string
   def self.decode_ira(str)
     unencoded=""
 
@@ -611,6 +499,7 @@ class Ucp::Util::UCP
 
 
 
+  # convert an integer to an hex string, two (or given) nibbles wide
   def self.int2hex(i,max_nibbles=2)
     tmp=i.to_s(16).upcase
     if tmp.length%2!=0
@@ -627,7 +516,7 @@ class Ucp::Util::UCP
 
 
 
-  # usado para construir um UCP duma string
+  # given a UCP pdu string, return a UCP pdu object
   def self.parse_str(ustr)
     #puts "parse_str(#{ustr})"
 
@@ -759,21 +648,17 @@ class Ucp::Util::UCP
 
 
 
-  # usado para construir uma resposta UCP a partir dum UCP
+  # given an UCP pdu object, build a corresponding result pdu
   def self.make_ucp_result(ucp)
-    puts "make_ucp_result(#{ucp.to_s})"
+    #puts "make_ucp_result(#{ucp.to_s})"
 
     if ucp.nil?
       return nil
     end
 
     trn=ucp.trn
-    #puts "#{trn}"
-    # length
     operation_type=ucp.operation_type
-    #puts "#{operation_type}"
     operation=ucp.operation
-    #puts "#{operation}"
 
     ucpmsg=nil
 
@@ -811,12 +696,14 @@ class Ucp::Util::UCP
     return ucpmsg
   end
 
+  # convert hexadecimal represent string to string, assuming a byte per character
   def self.hex2str(hexstr)
     str=""
     hexstr.scan(/../).each { | tuple | str+=tuple.hex.chr }
     return str
   end
 
+  # given an UCP pdu object, decode message field
   def self.decode_ucp_msg(ucp)
     text=nil
     dcs=ucp.dcs.to_i(16)
@@ -857,6 +744,7 @@ class Ucp::Util::UCP
     return text
   end
 
+  # given an UCP pdu object, decode the originator address
   def self.decode_ucp_oadc(ucp)
     otoa=nil
     oadc=ucp.get_field(:oadc)
