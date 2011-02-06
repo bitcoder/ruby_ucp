@@ -2,9 +2,64 @@
 
 A pure Ruby implementation of the EMI/UCP protocol v4.6 that is used when communicating
 with a SMSC.
-It allows sending SMS, text and binary.
-It supports also 7bit and 16bit encoded SMS.
+Please consult up-to-date information in ruby_ucp's wiki: https://github.com/bitcoder/ruby_ucp/wiki.
+Official releases can be obtained directly from RubyGems: https://rubygems.org/gems/ruby_ucp.
+The following information may not be up-to-date; it is here just for quick access. See the wiki site.
 
-Have fun, this was just the first import, I will detail all in the upcoming versions.
+Sergio Freire <sergio.freire at gmail.com>
 
-Sergio Freire
+
+Introduction
+============
+
+About “ruby_ucp”
+
+“ruby_ucp” is a pure Ruby library implementation of the EMI/UCP v.4.6 specification/protocol used by Large Accounts (e.g. applications) to communicate with SMSC’s, in order to send and receive short messages (“SMS”).
+It is licensed under LGPL v2.1, so feel free to use it and contribute with your code or feedback in order to improve it.
+The main focus of this library is the correct encoding/decoding of UCP PDUs. By combining low-level with helper methods, the user has full control of the built PDUs, all with ease.
+Besides this, two classes are given: one for an UCP client and another for an UCP server. These classes are not perfect (e.g. they dont implement states) but may be used in most scenarios, specially the client, and serve as inspiration to build other ones.
+
+The gem is available for download directly from the RubyGems repository, and is named ruby_ucp.
+The UCP specification itself: EMI/UCP v4.6.
+Some local info about UCP PDUs: https://github.com/bitcoder/ruby_ucp/wiki/UCP-PDUs.
+Some local info on SMS alphabets/encodings: https://github.com/bitcoder/ruby_ucp/wiki/SMS-Alphabets.
+
+Features
+========
+
+Currently, it supports:
+
+- encoding/decoding most UCP pdu’s: 01,30,31,51,52,53,54,55,56,57,58,60 and 61
+- direct access to UCP pdu fields
+- automatic checksum/length calculation
+- instantiate an UCP pdu object from a given string
+- helper methods within pdu’s, to easily build “submit messages” (AO)
+- support alphanumeric originators
+- en/decoding of 7bit GSM default alphabet text messages for basic text encoding
+- en/decoding of 16bit (UCS2) messages for full character support
+- simple UCP client (MULA), with authentication support
+- simple UCP server (e.g. for simulating a SMSC or a LA application working in UCP SILA mode)
+- automatic create multiple concatenated messages, for a given message text
+- extern, smarter and more correct UCP clients/servers may be implemented using just the UCP pdu encoding/decoding features
+
+Soon:
+
+- automatic text encoding selection (7bit vs 16bit), for optimum concatenated message creation (reduce the number of SM parts; use only UCS-2 if necessary). (now 7bit is forced in make_multi_ucps() method)
+
+
+Not so good features :)
+========================
+
+- the library is thought for correctness, not performance (you should not find a problem though)
+- the provided UCP client is synchronous; it does not have a state machine in order to handle UCP windowing features
+- the provided UCP server is also synchronous; it does not support UCP windowing
+- no Ruby v1.9.x support (it would require rewriting sensible parts due to encoding issues and string handling)
+- unitary tests unspecified, yet
+- documentation lacking, yet
+
+Requirements
+============
+
+Ruby v1.8.6 or v.1.8.7. No v1.9.x support!
+(tested with Ubuntu 9.10, Redhat AS 5.x)
+
