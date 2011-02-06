@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby_ucp}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sergio Freire"]
-  s.date = %q{2011-01-16}
+  s.date = %q{2011-02-06}
   s.description = %q{Ruby library implementation of EMI/UCP protocol v4.6 for SMS}
   s.email = %q{sergio.freire@gmail.com}
   s.extra_rdoc_files = [
@@ -62,6 +62,7 @@ Gem::Specification.new do |s|
     "lib/ucp/pdu/ucp_operation.rb",
     "lib/ucp/pdu/ucp_result.rb",
     "lib/ucp/pdu/ucpmessage.rb",
+    "lib/ucp/util/auth_request.rb",
     "lib/ucp/util/base.rb",
     "lib/ucp/util/gsm_packed_msg.rb",
     "lib/ucp/util/packed_msg.rb",
