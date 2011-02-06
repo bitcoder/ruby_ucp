@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Documentation by YARD 0.6.4</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h2>ruby_ucp</h2>
+<p>
+A pure Ruby implementation of the EMI/UCP protocol v4.6 that is used when
+communicating with a SMSC. Please consult up-to-date information in
+ruby_ucp&#8217;s wiki: https://github.com/bitcoder/ruby_ucp/wiki. Official
+releases can be obtained directly from RubyGems:
+https://rubygems.org/gems/ruby_ucp. The following information may not be
+up-to-date; it is here just for quick access. See the wiki site.
+</p>
+<p>
+Sergio Freire &lt;sergio.freire at gmail.com&gt;
+</p>
+<p>
+Introduction
+</p>
+<h6>======</h6>
+<p>
+About “ruby_ucp”
+</p>
+<p>
+“ruby_ucp” is a pure Ruby library implementation of the EMI/UCP v.4.6
+specification/protocol used by Large Accounts (e.g. applications) to
+communicate with SMSC’s, in order to send and receive short messages
+(“SMS”). It is licensed under LGPL v2.1, so feel free to use it and
+contribute with your code or feedback in order to improve it. The main
+focus of this library is the correct encoding/decoding of UCP PDUs. By
+combining low-level with helper methods, the user has full control of the
+built PDUs, all with ease. Besides this, two classes are given: one for an
+UCP client and another for an UCP server. These classes are not perfect
+(e.g. they dont implement states) but may be used in most scenarios,
+specially the client, and serve as inspiration to build other ones.
+</p>
+<p>
+The gem is available for download directly from the RubyGems repository,
+and is named ruby_ucp. The UCP specification itself: EMI/UCP v4.6. Some
+local info about UCP PDUs:
+https://github.com/bitcoder/ruby_ucp/wiki/UCP-PDUs. Some local info on SMS
+alphabets/encodings:
+https://github.com/bitcoder/ruby_ucp/wiki/SMS-Alphabets.
+</p>
+<p>
+Features
+</p>
+<h6>==</h6>
+<p>
+Currently, it supports:
+</p>
+<ul>
+<li>encoding/decoding most UCP pdu’s: 01,30,31,51,52,53,54,55,56,57,58,60 and
+61
+
+</li>
+<li>direct access to UCP pdu fields
+
+</li>
+<li>automatic checksum/length calculation
+
+</li>
+<li>instantiate an UCP pdu object from a given string
+
+</li>
+<li>helper methods within pdu’s, to easily build “submit messages” (AO)
+
+</li>
+<li>support alphanumeric originators
+
+</li>
+<li>en/decoding of 7bit GSM default alphabet text messages for basic text
+encoding
+
+</li>
+<li>en/decoding of 16bit (UCS2) messages for full character support
+
+</li>
+<li>simple UCP client (MULA), with authentication support
+
+</li>
+<li>simple UCP server (e.g. for simulating a SMSC or a LA application working
+in UCP SILA mode)
+
+</li>
+<li>automatic create multiple concatenated messages, for a given message text
+
+</li>
+<li>extern, smarter and more correct UCP clients/servers may be implemented
+using just the UCP pdu encoding/decoding features
+
+</li>
+</ul>
+<p>
+Soon:
+</p>
+<ul>
+<li>automatic text encoding selection (7bit vs 16bit), for optimum concatenated
+message creation (reduce the number of SM parts; use only UCS-2 if
+necessary). (now 7bit is forced in make_multi_ucps() method)
+
+</li>
+</ul>
+<p>
+Not so good features :)
+</p>
+<h6>==================</h6>
+<ul>
+<li>the library is thought for correctness, not performance (you should not
+find a problem though)
+
+</li>
+<li>the provided UCP client is synchronous; it does not have a state machine in
+order to handle UCP windowing features
+
+</li>
+<li>the provided UCP server is also synchronous; it does not support UCP
+windowing
+
+</li>
+<li>no Ruby v1.9.x support (it would require rewriting sensible parts due to
+encoding issues and string handling)
+
+</li>
+<li>unitary tests unspecified, yet
+
+</li>
+<li>documentation lacking, yet
+
+</li>
+</ul>
+<p>
+Requirements
+</p>
+<h6>======</h6>
+<p>
+Ruby v1.8.6 or v.1.8.7. No v1.9.x support! (tested with Ubuntu 9.10, Redhat
+AS 5.x)
+</p>
+</div></div>
+    
+    <div id="footer">
+  Generated on Sun Feb  6 23:08:09 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
