@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "Rakefile.orig",
     "VERSION",
+    "lib/performance/stresser.rb",
     "lib/ruby_ucp.rb",
     "lib/samples/main.rb",
     "lib/ucp/base.rb",
