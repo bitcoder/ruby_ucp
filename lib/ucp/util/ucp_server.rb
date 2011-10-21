@@ -99,12 +99,19 @@ class Ucp::Util::UcpServer
               end
 
               reply_ucp=UCP.make_ucp_result(ucp)
-              reply_ucp.ack("ok")
+              if reply_ucp.operation == "31" || reply_ucp.operation == "60"
+                reply_ucp.ack("ok")
+              else
+                smscid="#{ucp.get_field(:adc)}:#{Time.now.strftime("%d%m%y%H%M%S")}"
+                reply_ucp.ack("",smscid)
+              end
 
               #puts "reply #{reply_ucp.to_s}"
               s.print reply_ucp.to_s
               puts "Ssent: #{reply_ucp.to_s}\n"
             end
+          rescue Exception=>e
+            puts "Error: #{e.backtrace}"
           ensure
             puts "*** #{name}:#{port} disconnected/closed"
             s.close # close socket on error
