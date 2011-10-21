@@ -65,4 +65,4 @@ require "ucp/util/sms_request.rb"
 require "ucp/util/ucp.rb"
 require "ucp/util/ucp_server.rb"
 require "ucp/util/ucs2_packed_msg.rb"
-
+require "ucp/util/auth_request.rb"
