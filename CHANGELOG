@@ -1,5 +1,8 @@
 ============ RELEASED ==============
 
+= 0.3.0 (2011-10-21)
+* fixed issues #10, #13, #14, #15
+
 = 0.2.0 (2011-02-06)
 * miscelaneous cleanup
 * basic documentation of methods in Ucp::Util::UCP
@@ -39,6 +42,3 @@
 
 = 0.4.0
 * add samples
-
-= 0.3.0
-* methods documentation
