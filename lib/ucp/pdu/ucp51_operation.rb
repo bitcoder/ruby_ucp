@@ -58,7 +58,7 @@ class Ucp::Pdu::Ucp51Operation < Ucp::Pdu::UCP5x
  def parse_xser
    @xservices.each { |xser|
 
-     puts "xser_id: #{xser[0,2]}"
+#     puts "xser_id: #{xser[0,2]}"
      
      if xser[0,2].eql?("01")
         header=xser[4,xser[2,2].to_i(16)*2]
@@ -128,7 +128,7 @@ class Ucp::Pdu::Ucp51Operation < Ucp::Pdu::UCP5x
     # UCP51 supports IRA encoded SMS and 16 bits UCS2
     # for now assume IRA
     if !message.nil?
-      msg=UCP.ascii2ira(message)
+      msg=UCP.ascii2ira(message).encoded
     end
     mt=3
 
