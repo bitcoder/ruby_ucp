@@ -100,15 +100,18 @@ server.set_authentication_handler(method(:auth_handler))
 cliente=UcpClient.new("localhost",port,{:login=>8006,:password=>"timor"})
 #sent=cliente.send_message(1234,961234567,"1234567890"*17+"ola custa 1€ sabias?")
 
+
 ans=cliente.send_alert("961234567","0100")
-puts "ans: #{ans}"
+puts "ans_send_alert: #{ans}"
+
 s="1234567890"*8+"1€"
 sent=cliente.send_message(1234,961234567,s)
 puts "sent: #{sent}"
 ucp=Ucp30Operation.new
 ucp.basic_submit(1234, 961234567, "ola 1€éuro Ç!@\'\"#\$%&/()=<>,.-;:*+[]")
 ans=cliente.send_sync(ucp)
-puts "ans: #{ans}"
+puts "--------------------------"
+puts "ans_send_sync: #{ans}"
 cliente.close
 server.stop
 exit
