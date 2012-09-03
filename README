@@ -1,5 +1,7 @@
 == ruby_ucp
 
+Throw me shit!
+
 A pure Ruby implementation of the EMI/UCP protocol v4.6 that is used when communicating
 with a SMSC.
 Please consult up-to-date information in ruby_ucp's wiki: https://github.com/bitcoder/ruby_ucp/wiki.
