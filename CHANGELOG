@@ -1,4 +1,6 @@
 ============ RELEASED ==============
+= 0.3.1 (2012-09-03)
+* Added UDPClinent can now select IP:Port for local interface
 
 = 0.3.0 (2011-10-21)
 * fixed issues #10, #13, #14, #15

@@ -27,10 +27,14 @@ class Ucp::Util::UcpClient
 
   @trn=0
   @mr=0
+  
+ attr_accessor :host,:port,:local_host,:local_port
 
-  def initialize(host,port, authcreds=nil)
+  def initialize(host,port,local_host=nil,local_port=nil,authcreds=nil)
     @host=host
     @port=port
+    @local_host=local_host
+    @local_port=local_port
     @connected=false
     @authcreds=authcreds
     @trn=0
@@ -42,7 +46,7 @@ class Ucp::Util::UcpClient
     #puts "connect()"
     
     begin
-        @socket = TCPSocket.new(@host, @port)
+        @socket = TCPSocket.new(@host, @port,@local_host,@local_port)
         @connected=true
         @trn=0
     rescue
